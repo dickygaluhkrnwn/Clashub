@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Detail: Liga Musim 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item active">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div class="header-left-content"> 
+                <div class="profile-info">
+                    <h1>ClashHub Liga Musim 3</h1>
+                    <span class="status-badge status-upcoming">Akan Datang</span>
+                </div>
+            </div>
+            
+            <a href="registered_teams.html" class="team-action-btn btn-casual">Lihat Tim yang Terdaftar (25/32)</a>
+        </div>
+
+        <section class="tournament-detail-layout">
+            
+            <div class="detail-content card">
+                
+                <div class="detail-section">
+                    <h3><i class="fas fa-info-circle text-secondary"></i> Detail Event</h3>
+                    
+                    <div class="tournament-info-grid">
+                        <div class="info-block">
+                            <i class="fas fa-calendar-times"></i>
+                            <h4>Pendaftaran Ditutup</h4>
+                            <p>10 Oktober 2025</p>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-flag-checkered"></i>
+                            <h4>Turnamen Dimulai</h4>
+                            <p>15 Oktober 2025</p>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-coins"></i>
+                            <h4>Total Hadiah</h4>
+                            <p class="prize-pool">Rp 15.000.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3><i class="fas fa-gavel text-secondary"></i> Aturan Resmi Kompetisi</h3>
+                    <p>Turnamen ini menggunakan format Single Elimination (Gugur Tunggal), War Clan 5v5.</p>
+                    <div class="tournament-info-grid">
+                        <div class="info-block">
+                            <i class="fas fa-sitemap"></i>
+                            <h4>Format</h4>
+                            <p>Best-of-One (BO1)</p>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-chess-rook"></i>
+                            <h4>Syarat TH</h4>
+                            <p>TH 15 - 16</p>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-ban"></i>
+                            <h4>Ban List</h4>
+                            <p>Royal Champion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="registration-panel card">
+                <h3><i class="fas fa-clipboard-check text-secondary"></i> Panel Pendaftaran</h3>
+                
+                <div class="tournament-info-grid">
+                    <div class="info-block">
+                        <i class="fas fa-check-circle text-casual"></i>
+                        <h4>Status Tim</h4>
+                        <p>Layak Mendaftar</p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-users"></i>
+                        <h4>Min. Anggota</h4>
+                        <p>5 <span class="info-status text-casual">(Lolos)</span></p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-chess-rook"></i>
+                        <h4>Syarat TH</h4>
+                        <p>15-16 <span class="info-status text-casual">(Lolos)</span></p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-coins"></i>
+                        <h4>Biaya Reg.</h4>
+                        <p>Rp 50.000</p>
+                    </div>
+                </div>
+
+                <a href="registration_success.html" class="btn-main full-width"><i class="fas fa-clipboard-list"></i> DAFTAR SEKARANG</a>
+                
+                <p class="text-gray text-size-12 mt-15">*Pendaftaran otomatis mengunci roster tim Anda.*</p>
+            </aside>
+
+        </section>
+    </main>
+</body>
+</html>

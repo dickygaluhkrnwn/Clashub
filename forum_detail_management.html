@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Alat Tracking Kehadiran War</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item active">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="forum-detail-layout">
+            
+            <div class="profile-main-detail card">
+                <a href="knowledge_hub.html" class="btn-secondary mb-25"><i class="fas fa-arrow-left mr-8"></i> Kembali ke Forum</a>
+
+                <div class="post-content-area">
+                    <h1>Alat Apa yang Kalian Gunakan Untuk Tracking Kehadiran War?</h1>
+                    
+                    <div class="post-meta-detail">
+                        <span class="post-tags">
+                            <span>#ManajemenTim</span>
+                            <span>#Komitmen</span>
+                        </span>
+                        <span class="text-gray ml-20">Penulis: <a href="user_profile.html" class="author-link">KaptenX</a> | Tanggal: 14 Okt 2025</span>
+                    </div>
+    
+                    <div class="post-body">
+                        <p>Tim kami sering kesulitan melacak siapa saja yang absen saat war. Menggunakan spreadsheet manual terasa merepotkan. Apakah ada bot Discord atau aplikasi pihak ketiga yang direkomendasikan untuk otomatisasi tracking kehadiran dan performa war?</p>
+                        <p>Kami mencari solusi yang bisa:</p>
+                        <ul>
+                            <li><i class="fas fa-dot-circle"></i> Mengirim pengingat otomatis sebelum war.</li>
+                            <li><i class="fas fa-dot-circle"></i> Mencatat siapa yang melakukan serangan dan siapa yang tidak.</li>
+                            <li><i class="fas fa-dot-circle"></i> Memberikan rekap performa setelah war selesai.</li>
+                        </ul>
+                    </div>
+
+                    <div class="comments-section">
+                        <h3>Balasan (2)</h3>
+                        <div class="comment-card">
+                            <p class="author">LordZ:</p>
+                            <p>Kami pakai bot 'Sidekick'. Cukup bagus untuk tracking serangan dan pengingat, tapi rekap performanya masih manual. Ada yang lebih baik?</p>
+                        </div>
+                        
+                        <div class="comment-card">
+                            <p class="author">BaseMaster:</p>
+                            <p>Coba 'ClashTrack'. Ini aplikasi web, bukan bot Discord, tapi fiturnya lengkap banget untuk analisis performa individu setelah war. Sedikit berbayar tapi worth it untuk tim kompetitif.</p>
+                        </div>
+
+                        <div class="comment-input-area mt-20">
+                            <h4>Tulis Balasan Anda</h4>
+                            <textarea placeholder="Bagikan pengalaman atau rekomendasi alat Anda..."></textarea>
+                            <button class="btn-main mt-10">
+                                <i class="fas fa-paper-plane mr-8"></i> Kirim Balasan
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="author-sidebar card">
+                <img src="images/placeholder-avatar.png" alt="Avatar KaptenX" class="profile-avatar-lg">
+                <h3>KaptenX</h3>
+                <p class="text-gray mt-10 text-size-14">Kapten tim semi-kompetitif. <br> Reputasi: 4.6 <i class="fas fa-star"></i></p>
+                
+                <a href="user_profile.html" class="btn-secondary full-width mt-20">Lihat Profil</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

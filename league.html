@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Liga & Klasemen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item active">Tournament</a> 
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="main-tab-navigation">
+            <a href="tournament.html" class="tab-main-link">Daftar Turnamen</a>
+            <a href="league.html" class="tab-main-link active">Liga & Klasemen</a>
+        </div>
+
+        <section class="league-layout">
+            
+            <aside class="league-sidebar card">
+                <h2><i class="fas fa-trophy"></i> Klasifikasi Liga</h2>
+                <div class="filter-group">
+                    <h3>Musim Liga</h3>
+                    <select>
+                        <option>ClashHub Liga - Musim 3 (Aktif)</option>
+                        <option>ClashHub Liga - Musim 2</option>
+                        <option>ClashHub Liga - Musim 1</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Jenis Peringkat</h3>
+                    <a href="#" class="league-nav-item active">Peringkat Tim Divisi Master</a>
+                    <a href="#" class="league-nav-item">Peringkat Individu (Top Star)</a>
+                    <a href="#" class="league-nav-item">Riwayat Musim Liga</a>
+                </div>
+            </aside>
+
+            <section class="league-main-content card">
+                <div class="d-flex justify-content-between align-items-center mb-25">
+                    <h2>Divisi Master - Klasemen Tim</h2>
+                    <select>
+                        <option>Divisi Master</option>
+                        <option>Divisi Diamond</option>
+                        <option>Divisi Platinum</option>
+                    </select>
+                </div>
+
+                <div class="top-ranking-grid">
+                    <div class="rank-card rank-1" data-rank="1">
+                        <span class="rank-badge">#1</span>
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Tim" class="rank-card-logo">
+                        <p class="team-name">War Legends</p>
+                        <p>Poin: <strong class="rank-highlight">205</strong></p>
+                    </div>
+                    <div class="rank-card rank-2" data-rank="2">
+                        <span class="rank-badge">#2</span>
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Tim" class="rank-card-logo">
+                        <p class="team-name">TH15 Experts</p>
+                        <p>Poin: <strong class="rank-highlight">180</strong></p>
+                    </div>
+                    <div class="rank-card rank-3" data-rank="3">
+                        <span class="rank-badge">#3</span>
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Tim" class="rank-card-logo">
+                        <p class="team-name">Clash Elites Pro</p>
+                        <p>Poin: <strong class="rank-highlight">175</strong></p>
+                    </div>
+                </div>
+                
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nama Tim</th>
+                            <th>Poin</th>
+                            <th>Win</th>
+                            <th>Loss</th>
+                            <th>War Stars</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank-highlight">1</td>
+                            <td><a href="team_profile.html">War Legends</a></td>
+                            <td class="rank-highlight">205</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>450</td>
+                            <td><a href="team_profile.html" class="btn-cta-small btn-table-action">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td class="rank-highlight">2</td>
+                            <td><a href="team_profile.html">TH15 Experts</a></td>
+                            <td>180</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>420</td>
+                            <td><a href="team_profile.html" class="btn-cta-small btn-table-action">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="team_profile.html">Clash Elites Pro</a></td>
+                            <td>175</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>380</td>
+                            <td><a href="team_profile.html" class="btn-cta-small btn-table-action">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Top Tier Gaming</td>
+                            <td>150</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>350</td>
+                            <td><a href="#" class="btn-cta-small btn-table-action">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>The Golden Clan</td>
+                            <td>145</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>345</td>
+                            <td><a href="#" class="btn-cta-small btn-table-action">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </section>
+
+        </section>
+    </main>
+    <script src="interactive.js"></script>
+</body>
+</html>

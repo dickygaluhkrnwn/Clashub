@@ -1,0 +1,3233 @@
+/*
+ * CLASHHUB STYLESHEET
+ * Fokus: Estetika Emas/Batu, Struktur Stabil, dan Perbaikan UI yang Lengkap.
+ */
+
+/* --- 1. DEFINISI PALET WARNA & FONT --- */
+:root {
+    --color-primary: #0F111A; 
+    --color-accent: #FFD700; 
+    --color-secondary: #B8860B; 
+    --color-text-light: #F0F0F0; 
+    --color-text-gray: #A0A0A0;
+    --color-text-dark: #1A1A1A;
+    --color-competitive: #B22222; 
+    --color-casual: #00CC7A; 
+    
+    --font-family: 'Inter', sans-serif;
+    --font-family-display: 'Dosis', sans-serif; /* DEFINISIKAN FONT JUDUL */
+    --card-bg: rgba(26, 28, 48, 0.8);
+    --hover-bg-soft: rgba(255, 215, 0, 0.1);
+    
+    --shadow-stone-soft: 0 5px 15px rgba(0, 0, 0, 0.6);
+    --border-radius-default: 4px;
+}
+
+/* --- 2. BASE STYLING & GLOBAL RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    
+    background-image: url('images/stone-texture.png'); 
+    background-repeat: repeat;
+    background-size: 500px;
+    background-attachment: fixed;
+}
+
+/* --- 2.1. LIGHT MODE THEME --- */
+/* =================================================================
+   LIGHT MODE COLOR PALETTE - REFINED
+   ================================================================= */
+body.light-mode {
+    /* Warna Dasar */
+    --color-background: #F5F1E9; /* Latar belakang krem/pasir yang hangat */
+    --color-surface: #FFFCF5;    /* Permukaan kartu putih gading yang lembut */
+    --color-border: #DCD3C2;      /* Garis batas yang lebih hangat dan menyatu */
+    --color-shadow: rgba(92, 64, 51, 0.1); /* Bayangan dengan sedikit hint coklat */
+
+    /* Warna Teks */
+    --color-text-primary: #4F423B;   /* Teks utama coklat tua, lebih hangat dari hitam */
+    --color-text-secondary: #85746B; /* Teks sekunder abu-abu kecoklatan */
+    --color-text-inverted: #FFFFFF;  /* Teks di atas tombol berwarna */
+
+    /* Warna Aksen & Status (Disesuaikan untuk Mode Terang) */
+    --color-accent: #D97706;         /* Aksen utama tembaga/perunggu yang lebih kaya */
+    --color-accent-hover: #B45309;
+    --color-competitive: #D32F2F;     /* Merah untuk kompetitif */
+    --color-casual: #059669;         /* Hijau pinus untuk kasual, lebih menyatu */
+    --color-success: #2E7D32;         /* Hijau untuk status berhasil/live */
+    --color-warning: #ED6C02;         /* Oranye untuk peringatan */
+
+    --color-btn-secondary-bg: #EAE3D6;
+    --color-btn-secondary-text: var(--color-text-primary);
+    --color-btn-secondary-hover-bg: #DCD3C2;
+    --color-input-bg: #FFFCF5;
+    --color-input-border: #DCD3C2;
+    --color-placeholder-text: #A8998D;
+
+    /* Override variabel lama */
+    --color-primary: var(--color-background);
+    --color-text-light: var(--color-text-primary);
+    --color-text-gray: var(--color-text-secondary);
+    --card-bg: var(--color-surface);
+    --shadow-stone-soft: 0 2px 8px var(--color-shadow);
+    --hover-bg-soft: rgba(0, 0, 0, 0.04);
+
+    background-image: none;
+    background-color: var(--color-background);
+}
+
+/* Penyesuaian Tambahan untuk Konsistensi di Mode Terang */
+.light-mode .main-header,
+.light-mode .filter-sidebar,
+.light-mode .card,
+.light-mode .post-card,
+.light-mode .team-card-search,
+.light-mode .review-card,
+.light-mode .notification-card,
+.light-mode .strategist-card,
+.light-mode .edit-profile-container,
+.light-mode .profile-sidebar-user,
+.light-mode .user-cv-main .cv-section,
+.light-mode .review-stats-sidebar,
+.light-mode .review-list-area,
+.light-mode .war-sidebar,
+.light-mode .strategy-panel,
+.light-mode .forum-feed-area,
+.light-mode .trending-sidebar,
+.light-mode .topic-nav-sidebar,
+.light-mode .author-sidebar,
+.light-mode .profile-main-detail,
+.light-mode .tournament-main-content,
+.light-mode .auth-form {
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    background-color: var(--color-surface);
+}
+
+.light-mode .tournament-card {
+    background-color: var(--color-surface);
+}
+
+.light-mode .team-card-search:hover,
+.light-mode .post-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .btn-secondary {
+    background-color: var(--color-btn-secondary-bg);
+    color: var(--color-btn-secondary-text);
+    border: 1px solid var(--color-border);
+}
+
+.light-mode .btn-secondary:hover {
+    background-color: var(--color-btn-secondary-hover-bg);
+}
+
+.light-mode input,
+.light-mode select,
+.light-mode textarea {
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-input-border);
+    color: var(--color-text-primary);
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+    color: var(--color-placeholder-text);
+}
+
+.light-mode .logo {
+    color: var(--color-text-primary);
+}
+
+/* Perbaikan Teks Hero Banner agar selalu terang */
+.hero-banner h1,
+.hero-banner .hero-tagline {
+    color: #FFFFFF !important; /* Paksa warna putih */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important; /* Tambah shadow agar lebih terbaca */
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s, box-shadow 0.2s;
+}
+
+/* --- 3. HEADER & NAVIGASI GLOBAL --- */
+@keyframes header-glow {
+    0%, 100% {
+        box-shadow: 
+            inset 0 -5px 10px rgba(255, 215, 0, 0.2), 
+            0 10px 20px rgba(0, 0, 0, 0.8); 
+    }
+    50% {
+        box-shadow: 
+            inset 0 -8px 15px rgba(255, 215, 0, 0.4), 
+            0 10px 25px rgba(0, 0, 0, 0.8); 
+    }
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; 
+    background-color: var(--color-primary); 
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: header-glow 5s ease-in-out infinite;
+}
+
+.logo {
+    font-family: var(--font-family-display);
+    font-size: 26px; 
+    font-weight: bold;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--color-accent), 2px 2px 3px rgba(0, 0, 0, 0.8); 
+}
+
+.main-nav .nav-item {
+    margin: 0 15px;
+    color: var(--color-text-light);
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    padding: 5px 10px; 
+    border-radius: var(--border-radius-default);
+}
+
+.main-nav .nav-item:hover {
+    color: var(--color-accent);
+}
+
+.main-nav .nav-item.active {
+    color: var(--color-primary); 
+    background-color: var(--color-accent); 
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(255, 215, 0, 0.7); 
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s;
+}
+.theme-toggle:hover {
+    color: var(--color-accent);
+    background-color: var(--hover-bg-soft);
+}
+.user-actions .fas {
+    color: var(--color-text-light);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.user-actions .fas:hover {
+    color: var(--color-accent);
+}
+
+.notification {
+    /* Mengubah div notifikasi menjadi area yang bisa diklik */
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px; /* Memberi ruang klik */
+    border-radius: var(--border-radius-default);
+    transition: background-color 0.2s;
+}
+.user-actions .notification:hover {
+    background-color: var(--hover-bg-soft);
+}
+
+.notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--color-competitive);
+    color: var(--color-text-light);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.profile-avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+.profile-avatar.active img {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); 
+}
+
+/* --- 4. GLOBAL CONTAINER & TITLES --- */
+.container {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-family-display);
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+h1 { 
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-tagline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--color-text-gray);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 15px;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+/* Warna Data Kunci */
+.data-th, .status-time, .rating-score, .prize-pool, .rank-highlight, 
+.profile-summary .data-th, .profile-summary .data-rating {
+    color: var(--color-secondary) !important; 
+    font-weight: bold;
+}
+.text-gray { 
+    color: var(--color-text-gray); 
+}
+
+
+/* --- 5. GLOBAL CARD & UTILITIES (SKEUOMORPHIC) --- */
+/* Gaya dasar untuk semua komponen 'card' */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.6), 
+        var(--shadow-stone-soft); 
+    transition: all 0.3s ease-in-out;
+}
+
+/* Terapkan gaya card ke elemen spesifik yang belum memiliki kelas .card */
+.leaderboard-table, .detail-section-card, .review-form-container,
+.create-post-container, .create-tournament-container, .edit-profile-container,
+.notification-filter-sidebar, .calendar-area, .registration-panel {
+    /* Properti ini sekarang diwarisi dari .card, jadi kita hanya perlu menambahkan kelas .card di HTML */
+    /* Jika tidak memungkinkan mengubah HTML, biarkan selektor ini di sini dengan properti dari .card */
+}
+
+/* Hover effect untuk card */
+.team-card:hover, .strategy-card:hover, .team-card-search:hover, .tournament-card:hover, .post-card:hover,
+.strategist-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 
+        inset 0 0 10px rgba(0,0,0,0.7), 
+        0 8px 25px rgba(0, 0, 0, 0.7), 
+        0 0 15px var(--color-accent);
+}
+
+/* --- 6. BUTTONS & CTAS (SKEUOMORPHIC) --- */
+.btn-main, .btn-secondary, .team-action-btn, .user-action-btn {
+    padding: 15px 30px;
+    border-radius: var(--border-radius-default);
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Primary CTA (Efek 3D Tonjolan Emas) */
+.btn-main, .team-action-btn, .user-action-btn.btn-main {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), 0 6px 0 0 #9e7f1a; /* Efek 3D */
+}
+
+
+.btn-main:hover, .team-action-btn:hover, .user-action-btn.btn-main:hover {
+    box-shadow: 
+        inset 0 2px 2px rgba(255, 255, 255, 0.4), 
+        0 6px 0 0 #9e7f1a, 0 0 15px rgba(255, 215, 0, 0.6); /* Efek Glow Emas */
+}
+.btn-main:active, .team-action-btn:active, .user-action-btn.btn-main:active {
+    transform: translateY(6px); 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* Secondary CTA (Batu gelap dengan border emas) */
+.btn-secondary, .user-action-btn.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.1), 0 3px 0 0 #5a4b10;
+}
+.btn-secondary:hover, .user-action-btn.btn-secondary:hover {
+    box-shadow: 
+        inset 0 2px 2px rgba(255, 255, 255, 0.1), 
+        0 3px 0 0 #5a4b10, 0 0 15px rgba(255, 215, 0, 0.5); /* Efek Glow Emas */
+}
+.btn-secondary:active, .user-action-btn.btn-secondary:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.full-width {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Small CTA for cards */
+.btn-cta-small {
+    padding: 8px 15px;
+    font-size: 14px;
+    align-self: flex-start; 
+    margin-top: auto; 
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border-radius: var(--border-radius-default);
+    box-shadow: 0 3px 0 0 #9e7f1a;
+}
+.btn-cta-small:hover {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}
+.btn-cta-small:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Aksi di dalam Tabel */
+.btn-table-action {
+    background-color: var(--color-accent);
+    color: #0F111A !important; /* Paksa warna teks gelap agar selalu terbaca */
+    box-shadow: 0 2px 0 0 #9e7f1a;
+}
+
+/* Load More Button */
+.btn-load-more {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 20px auto;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius-default);
+    cursor: pointer;
+    box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.1), 0 3px 0 0 #5a4b10;
+}
+.btn-load-more:hover {
+    background-color: var(--hover-bg-soft);
+    box-shadow: inset 0 0 5px rgba(255, 215, 0, 0.7);
+}
+.btn-load-more:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 6.5. KELAS UTILITAS TAMBAHAN (UNTUK MENGGANTIKAN INLINE STYLES) --- */
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-25 { margin-bottom: 25px; }
+.mb-30 { margin-bottom: 30px; }
+
+.mt-0 { margin-top: 0; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-25 { margin-top: 25px; }
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+
+.ml-20 { margin-left: 20px; }
+.mr-5 { margin-right: 5px; }
+.mr-8 { margin-right: 8px; }
+
+.d-inline-flex { display: inline-flex; }
+.align-items-center { align-items: center; }
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+
+.justify-content-between { justify-content: space-between; }
+
+.text-size-14 { font-size: 14px; }
+.text-size-16 { font-size: 16px; }
+.font-italic { font-style: italic; }
+
+.text-casual { color: var(--color-casual); }
+.link-gray { color: var(--color-text-gray); }
+.link-gray:hover { color: var(--color-text-light); }
+
+.btn-casual {
+    background-color: var(--color-casual);
+    box-shadow: 0 6px 0 0 #00995c;
+    color: var(--color-primary);
+}
+
+.btn-danger {
+    background-color: var(--color-competitive) !important;
+    border-color: var(--color-competitive) !important;
+    color: white !important;
+    box-shadow: 0 3px 0 0 #801818;
+}
+
+/* Tombol navigasi kembali yang lebih kecil */
+.btn-nav-back {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 0; /* Hapus margin atas agar sejajar di header */
+    align-self: center; /* Sejajarkan secara vertikal */
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 0 0 #5a4b10;
+}
+.btn-nav-back:hover {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 0 0 #5a4b10, 0 0 10px rgba(255, 215, 0, 0.4);
+}
+.btn-nav-back:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 6.6. KELAS SPESIFIK HALAMAN (UNTUK MENGGANTIKAN INLINE STYLES) --- */
+.text-gradient-gold {
+    background: linear-gradient(to bottom, var(--color-accent), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.reputation-score-large {
+    font-size: 40px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.d-flex { display: flex; }
+.text-accent { color: var(--color-accent); }
+.mt-5 { margin-top: 5px; }
+.text-secondary { color: var(--color-secondary); }
+.text-warning { color: #FFB800; }
+.text-center { text-align: center; }
+.font-bold { font-weight: bold; }
+.text-competitive { color: var(--color-competitive); }
+.text-size-12 { font-size: 12px; }
+
+.icon-large {
+    font-size: 60px;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+/* --- 8.10. AUTH PAGE STYLING (auth.html) --- */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-container {
+    position: relative; /* Diperlukan untuk tombol theme-toggle */
+    width: 100%;
+    max-width: 450px; /* Batasi lebar maksimum form */
+    padding: 40px;
+    /* Menggunakan gaya card yang konsisten */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    text-align: center; /* Pusatkan logo dan tab */
+}
+
+/* Gaya untuk navigasi tab di halaman auth */
+.tab-auth {
+    display: flex;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.tab-auth-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-gray);
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.tab-auth-link.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+.auth-form {
+    display: none; /* Sembunyikan form secara default */
+    flex-direction: column;
+    gap: 20px; /* Jarak yang lebih konsisten antar elemen utama */
+    margin-top: 30px; /* Beri jarak dari tab */
+}
+.auth-form.active {
+    display: flex; /* Tampilkan form yang aktif sebagai flex container */
+}
+
+/* Aturan spesifik untuk tautan 'Lupa Password' */
+.auth-form a {
+    text-align: right; /* Posisikan ke kanan */
+    font-size: 14px;
+    margin-top: -10px; /* Kurangi jarak setelah input password */
+    margin-bottom: 10px; /* Beri sedikit jarak sebelum tombol login */
+}
+
+/* --- 7. GLOBAL FORM ELEMENTS STYLING --- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius-default);
+    color: var(--color-text-light);
+    font-size: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.tab-content {
+    display: none; /* Sembunyikan tab content secara default */
+}
+.tab-content.active {
+    display: block; /* Tampilkan hanya yang aktif */
+}
+
+.reputation-score {
+    font-size: 36px;
+    font-weight: bold;
+}
+.section-divider-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;
+}
+
+/* --- 7. HOME PAGE LAYOUT & PERBAIKAN GRID/FLEXBOX (index.html) --- */
+.top-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.status-panel {
+    display: flex;
+    gap: 30px;
+}
+
+.status-panel .flex-item-grow {
+    flex-basis: 50%;
+    min-width: 0; 
+    padding: 20px; 
+}
+
+.status-card {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+/* Status War Mendatang */
+.status-title-large {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+    padding-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.war-metrics {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 25px;
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+.metric-item {
+    flex: 1 1 30%; 
+    min-width: 90px; 
+    padding: 10px 5px;
+    border-right: 1px solid rgba(255, 215, 0, 0.1);
+}
+.metric-item:last-child {
+    border-right: none;
+}
+
+.metric-item i {
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text-light);
+    display: block;
+    margin-bottom: 3px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+.metric-item p {
+    font-size: 11px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.status-detail {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 10px;
+}
+
+.countdown-display {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 10px;
+    border-radius: var(--border-radius-default);
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.status-time {
+    font-family: 'Dosis', sans-serif; 
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-accent); /* GANTI KE WARNA AKAN */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* SESUAIKAN SHADOW */
+}
+
+.status-time-small {
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    color: var(--color-accent);
+}
+
+.status-time-medium {
+    font-size: 28px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    color: var(--color-accent);
+    line-height: 1.2;
+}
+
+/* Gaya Info Tim Pengguna */
+.user-team-info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.user-team-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary); 
+}
+
+.user-team-header h3 {
+    margin: 0;
+    text-shadow: none;
+}
+.user-team-header .team-tag {
+    color: var(--color-accent);
+}
+
+.clan-league-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.clan-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.clan-stat-item {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    text-align: center;
+}
+.clan-stat-item p {
+    font-size: 10px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.clan-stat-item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.news-feed {
+    padding: 20px;
+    margin-top: 30px;
+}
+.news-feed h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 10px;
+}
+.news-feed a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.05);
+    color: var(--color-text-light);
+    transition: background-color 0.2s;
+}
+.news-feed a:hover {
+    background-color: var(--hover-bg-soft);
+    padding-left: 5px;
+}
+.news-feed p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.news-feed .news-date {
+    font-size: 12px;
+    color: var(--color-text-gray);
+    display: block;
+    margin-top: 5px;
+}
+
+/* Sidebar Info (Ringkasan Profil) */
+.profile-summary {
+    padding: 20px;
+    margin-bottom: 30px; 
+    text-align: center;
+}
+.summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 15px;
+}
+.summary-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+}
+.stat-grid-small {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.stat-item p {
+    font-size: 11px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+}
+.data-stat-large {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+.full-width-link {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content-section {
+    margin-bottom: 50px;
+}
+
+
+/* --- 8. HERO BANNER STYLING (ASET VISUAL) --- */
+.hero-banner {
+    background-image: url('images/clash-hero-art.png'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Kunci untuk efek parallax */
+    height: 400px; 
+    padding: 60px 40px;
+    margin-bottom: 30px;
+    
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: multiply; 
+    
+    text-align: center;
+    color: var(--color-text-light);
+    border-bottom: 4px solid var(--color-accent);
+    
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner h1, .hero-banner p, .hero-banner .btn-main {
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-banner .btn-main {
+    margin-top: 20px; 
+}
+
+/* Kontainer untuk sidebar kanan di halaman utama */
+.side-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* KELAS TAMBAHAN (Card Layouts) */
+/* 1. Grid untuk hasil pencarian yang membungkus (wrapping) */
+.card-grid {
+    display: grid;
+    /* Menggunakan auto-fit untuk membuat kolom responsif */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* 2. Carousel untuk kartu yang bisa digeser horizontal */
+.card-carousel {
+    display: grid;
+    grid-auto-flow: column; /* Kunci untuk baris horizontal */
+    grid-auto-columns: 340px; /* Lebar kartu default untuk desktop */
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 5px 20px 5px;
+    scroll-snap-type: x mandatory;
+    margin-top: 20px;
+    /* Menghilangkan scrollbar default */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Styling scrollbar untuk Chrome, Safari, dan browser WebKit lainnya */
+.card-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.card-carousel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+.card-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.card-grid > * {
+    scroll-snap-align: start; /* Setiap kartu akan 'snap' ke awal kontainer */
+}
+
+.clan-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.team-card, .strategy-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.6), 
+        var(--shadow-stone-soft); 
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.team-visuals {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.rating-badge {
+    margin-left: auto; 
+    text-align: right;
+}
+.team-stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 215, 0, 0.1);
+}
+.team-vision {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+.vision-competitive {
+    background-color: var(--color-competitive);
+    color: var(--color-text-light);
+}
+.vision-casual {
+    background-color: var(--color-casual);
+    color: var(--color-primary);
+}
+
+/* Gaya Strategy Card */
+.strategy-meta-top, .strategy-meta-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--color-text-gray);
+    margin-bottom: 10px;
+}
+.strategy-card h4 {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin: 10px 0;
+}
+.verified-badge {
+    color: var(--color-casual);
+    margin-left: 5px;
+}
+
+
+/* --- 8.5. TEAM HUB PAGE STYLING (teamhub.html) --- */
+.team-hub-page {
+    padding-top: 30px; 
+}
+
+.team-search-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.2fr) 3fr; 
+    gap: 40px;
+}
+
+/* Filter Sidebar - Stabilisasi Posisi Sticky */
+.filter-sidebar {
+    padding: 25px;
+    height: fit-content; 
+    position: sticky; 
+    top: 100px; 
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto; 
+}
+
+.filter-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 20px;
+}
+.filter-group:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--color-accent);
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.filter-group input[type="text"],
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius-default);
+    color: var(--color-text-light);
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.filter-group input[type="text"]::placeholder {
+    color: var(--color-text-gray);
+}
+
+/* Toggle Buttons (Competitive/Casual) */
+.toggle-group {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius-default);
+    overflow: hidden;
+    border: 1px solid var(--color-secondary);
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-gray);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.toggle-btn.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.toggle-btn.active[data-vision="competitive"] {
+    background-color: var(--color-competitive);
+    color: var(--color-text-light);
+}
+.toggle-btn.active[data-vision="casual"] {
+    background-color: var(--color-casual);
+    color: var(--color-primary); 
+}
+
+/* Range Sliders */
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent; 
+    margin: 10px 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--color-secondary), var(--color-accent));
+    border-radius: 3px;
+    border: 0.2px solid rgba(255, 215, 0, 0.3);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid var(--color-accent);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    cursor: pointer;
+    margin-top: -7px; 
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Search Results Section */
+.search-results {
+    overflow: hidden; 
+}
+
+.search-results h2 {
+    margin-bottom: 25px;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.filter-status {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    font-weight: normal;
+    text-transform: none;
+    margin-left: 10px;
+}
+
+.results-grid {
+    margin-bottom: 40px;
+}
+
+/* Specific styling for Team Search Cards (teamhub.html) */
+.team-card-search {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.team-card-header {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.team-card-header h4 {
+    font-size: 20px;
+    color: var(--color-accent);
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+.team-card-header .team-tag {
+    font-size: 13px;
+    color: var(--color-text-gray);
+    margin: 0;
+}
+
+.team-card-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.team-card-stats-grid .stat-item {
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px 5px;
+    border-radius: var(--border-radius-default);
+}
+
+.team-card-stats-grid .stat-item p {
+    font-size: 11px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.team-card-stats-grid .data-th-visual,
+.team-card-stats-grid .team-rating-full {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+.team-rating-full {
+    color: var(--color-accent);
+}
+.team-rating-full i {
+    color: var(--color-accent);
+    margin-right: 5px;
+}
+
+/* Clan Badge Background for team-card-search */
+.team-card-search::before {
+    content: '';
+    position: absolute;
+    top: -15px; 
+    right: -15px; 
+    width: 120px; 
+    height: 120px; 
+    background-image: url('images/clan-badge-placeholder.png'); 
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: 0;
+    filter: grayscale(100%) brightness(50%); 
+    transform: rotate(15deg); 
+}
+.team-card-search .team-card-header, .team-card-search .team-card-stats-grid, 
+.team-card-search .btn-cta-small {
+    position: relative; 
+    z-index: 1;
+}
+
+
+/* --- 8.6. TEAM PROFILE PAGE STYLING (team_profile.html) --- */
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    /* Menghapus border bawah dan menggantinya dengan gaya card */
+    border-bottom: none;
+    flex-wrap: wrap; /* Agar responsif */
+}
+
+.profile-header .header-left-content {
+    display: flex;
+    flex-direction: row; /* Ubah menjadi baris */
+    align-items: center; /* Sejajarkan item secara vertikal */
+    gap: 20px; /* Beri jarak antara tombol dan judul */
+}
+
+/* Gaya untuk tombol kembali (memakai global .btn-secondary) */
+/* Tombol kembali sekarang terpisah dari header */
+.profile-info h1 {
+    font-size: 36px;
+    margin: 0;
+    color: var(--color-text-light); 
+    border-left: none; 
+    padding-left: 0;
+}
+.profile-info .team-tag {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 5px;
+}
+.profile-info .team-vision {
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: var(--border-radius-default);
+}
+
+.team-action-btn {
+    padding: 12px 30px;
+    margin-top: 10px;
+}
+
+.team-status-badge {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.profile-content-layout {
+    /* Layout 3 kolom: Sidebar Kiri (1fr) | Main Content (3fr) | Sidebar Kanan (1.2fr) */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.2fr; 
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Layout untuk halaman profil publik (2 kolom) */
+.public-profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar kiri (1 bagian) | Konten utama (3 bagian) */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* KARTU SIDEBAR (Digunakan untuk Profile Sidebar Left/Right) */
+.profile-sidebar-left, 
+.profile-sidebar-right {
+    padding: 25px;
+    height: fit-content; 
+}
+
+/* Memastikan sidebar kanan tetap di tempatnya */
+.profile-sidebar-right {
+    position: sticky;
+    top: 100px;
+}
+
+.profile-sidebar-left h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--color-accent);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    padding-bottom: 8px;
+    text-shadow: none;
+}
+
+.reputation-summary {
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.reputation-summary h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+    text-shadow: none;
+}
+
+
+/* Navigasi Tab dan Detail Konten */
+.profile-main-detail {
+    padding: 20px;
+}
+.tab-navigation {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.1);
+}
+.tab-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-gray);
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-right: 15px;
+    font-weight: bold;
+
+    /* Reset gaya default button */
+    background: none;
+    border: none;
+    font-family: inherit; /* Warisi font dari parent */
+    text-transform: none; /* Hapus uppercase jika ada dari button */
+    padding: 10px 15px; /* Pastikan padding konsisten */
+}
+
+/* Perbaikan untuk tata letak konten di dalam tab profil */
+.detail-section h3 {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin-top: 30px; /* Beri jarak atas dari elemen sebelumnya */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    text-shadow: none;
+}
+.detail-section h3:first-child {
+    margin-top: 0; /* Hapus margin atas untuk judul pertama */
+}
+.detail-section p, .detail-section ul {
+    margin-bottom: 15px; /* Beri jarak bawah dari paragraf dan list */
+}
+
+.detail-section ul li {
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+}
+.detail-section ul li i {
+    margin-right: 10px;
+}
+
+/* Menyamakan gaya judul di panel registrasi */
+.registration-panel h3 {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    text-shadow: none;
+}
+
+/* Daftar Persyaratan di Panel Registrasi */
+.requirement-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 25px 0;
+    text-align: left;
+}
+.requirement-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--color-text-gray);
+    border-bottom: 1px dashed rgba(255,215,0,0.1);
+}
+
+/* --- 8.7.2. TOURNAMENT DETAIL INFO GRID --- */
+.tournament-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-block {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    text-align: center;
+    border: 1px solid rgba(255,215,0,0.1);
+    transition: all 0.2s ease;
+}
+.info-block:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+}
+
+.info-block i {
+    font-size: 24px;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.info-block h4 {
+    font-size: 12px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: none;
+}
+
+.info-block p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.info-block .info-status {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+
+/* Tabel Riwayat & Daftar Anggota */
+.competition-history-table {
+    /* Menggunakan gaya .leaderboard-table */
+}
+.competition-history-table th, .competition-history-table td,
+.leaderboard-table th, .leaderboard-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+.competition-history-table tr:hover, .leaderboard-table tr:hover {
+    background-color: var(--hover-bg-soft);
+}
+
+.member-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.member-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 215, 0, 0.05);
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.management-tool-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+}
+.management-tool-card i {
+    font-size: 32px;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* --- 8.7. TOURNAMENT HUB PAGE STYLING (tournament.html) --- */
+
+/* Navigasi Tab Utama di Halaman Turnamen */
+.main-tab-navigation {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.1);
+}
+.tab-main-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-gray);
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-right: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.tab-main-link:hover {
+    color: var(--color-accent);
+}
+.tab-main-link.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Layout Grid Utama Turnamen */
+.tournament-layout {
+    display: grid;
+    /* Layout 2 kolom: Sidebar Filter (1.2fr) | Konten Utama (3fr) */
+    grid-template-columns: minmax(280px, 1.2fr) 3fr; 
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.league-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.2fr) 3fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+/* Memastikan Filter Sidebar tetap di tempatnya (Menggunakan .filter-sidebar) */
+.tournament-filter-sidebar {
+    padding: 25px;
+    height: fit-content; 
+    position: sticky; 
+    top: 100px;
+}
+/* Card Turnamen */
+.tournament-card {
+    /* Mengambil properti card dasar Anda (section 5) */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1); 
+    border-radius: var(--border-radius-default);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.6), 
+        var(--shadow-stone-soft); 
+    transition: all 0.3s ease-in-out;
+    
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex; /* Menggunakan flexbox untuk tata letak konten & aksi */
+    justify-content: space-between;
+    align-items: center; /* Meratakan item secara vertikal */
+    border-left: 5px solid var(--color-accent); /* Penekanan visual default */
+}
+.tournament-card:hover { 
+    transform: translateY(-3px);
+    box-shadow: 
+        inset 0 0 15px rgba(0, 0, 0, 0.8), 
+        0 5px 10px rgba(0, 0, 0, 0.6);
+    border-color: var(--color-secondary);
+}
+.team-list-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        inset 0 0 15px rgba(0, 0, 0, 0.8), 
+        0 5px 10px rgba(0, 0, 0, 0.6);
+    border-color: var(--color-secondary);
+}
+.tournament-card h4 {
+    font-size: 20px;
+    color: var(--color-accent);
+    margin: 0 0 5px 0;
+}
+.tournament-card p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+.card-action-right {
+    text-align: right;
+}
+.card-action-right .btn-main,
+.card-action-right .btn-secondary {
+    margin-top: 10px; 
+}
+
+/* Gaya Status Badge Turnamen */
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.status-badge.status-upcoming {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+.status-badge.status-live {
+    background-color: var(--color-competitive); /* Merah untuk Live/Urgent */
+    color: var(--color-text-light);
+}
+
+/* Modifier untuk border kartu turnamen */
+.tournament-card.status-live-border {
+    border-left-color: var(--color-competitive);
+}
+
+/* --- 8.7.1. LEAGUE PAGE STYLING (league.html) --- */
+
+.league-nav-item {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    color: var(--color-text-light);
+    border-radius: var(--border-radius-default);
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+}
+.league-nav-item:hover {
+    background-color: var(--hover-bg-soft);
+    color: var(--color-accent);
+}
+.league-nav-item.active {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Podium Peringkat Teratas */
+.top-ranking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: flex-end; /* Kunci untuk efek podium */
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-top: 20px; /* Beri ruang untuk kartu #1 yang lebih tinggi */
+}
+
+.card.league-sidebar, .card.league-main-content {
+    padding: 25px;
+    height: fit-content;
+}
+.card.league-sidebar {
+    position: sticky; top: 100px;
+}
+
+/* Perbaikan: Hapus margin bawah dari h2 di dalam flex container agar sejajar */
+.d-flex > h2 {
+    margin-bottom: 0;
+}
+
+.rank-card {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border-radius: var(--border-radius-default);
+    border-top: 4px solid;
+    background: linear-gradient(145deg, rgba(26, 28, 48, 0.9), rgba(15, 17, 26, 0.9)), url('images/stone-texture.png');
+    background-size: cover;
+    box-shadow: var(--shadow-stone-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Kunci: Ratakan item di dalam kartu */
+    overflow: hidden;
+}
+.rank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--color-accent);
+}
+.rank-card-logo {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255,215,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
+}
+.rank-card .team-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0; /* Beri jarak vertikal */
+    flex-grow: 1; /* Kunci: Dorong poin ke bawah agar nama tim di tengah */
+    color: var(--color-text-light);
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.rank-card p {
+    font-size: 14px;
+    margin: 0; /* Hapus margin default dari paragraf */
+}
+.rank-card p:last-of-type {
+    margin-top: 10px; /* Beri jarak antara nama tim dan poin */
+    font-size: 14px;
+}
+.rank-card .rank-badge {
+    font-size: 24px;
+    font-family: var(--font-family-display);
+    font-weight: bold;
+}
+
+/* Warna Podium */
+.rank-1 { 
+    order: 2; /* Posisikan di tengah */
+    border-color: var(--color-accent);
+    transform: translateY(-20px) scale(1.05); 
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), var(--shadow-stone-soft);
+} /* Emas */
+.rank-2 { order: 1; border-color: #C0C0C0; } /* Perak, posisikan di kiri */
+.rank-3 { order: 3; border-color: #CD7F32; } /* Perunggu, posisikan di kanan */
+
+.rank-1 .rank-badge { color: var(--color-accent); }
+.rank-2 .rank-badge { color: #C0C0C0; }
+.rank-3 .rank-badge { color: #CD7F32; }
+
+/* Tabel Klasemen */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.leaderboard-table thead {
+    background-color: rgba(0,0,0,0.4);
+}
+.leaderboard-table th {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--color-text-gray);
+}
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 215, 0, 0.03);
+}
+.leaderboard-table td:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+.leaderboard-table td:last-child {
+    text-align: center;
+}
+.leaderboard-table .btn-cta-small {
+    margin: 0;
+}
+.leaderboard-table td a {
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+.leaderboard-table td a:hover {
+    color: var(--color-accent);
+}
+
+/* --- 8.8. KNOWLEDGE HUB / FORUM STYLING (knowledge_hub.html) --- */
+
+.knowledge-layout {
+    display: grid;
+    /* Layout 3 kolom: Navigasi Topik (1fr) | Feed Postingan (3fr) | Trending Sidebar (1.2fr) */
+    grid-template-columns: minmax(220px, 1fr) 3fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Layout untuk halaman detail berita (1 kolom terpusat) */
+.news-detail-layout {
+    max-width: 900px; /* Batasi lebar agar mudah dibaca */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.forum-detail-layout {
+    display: grid;
+    /* Layout 2 Kolom: Konten Postingan (3fr) | Sidebar Penulis (1.2fr) */
+    grid-template-columns: 3fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Sidebar Navigasi Topik */
+.topic-nav-sidebar {
+    padding: 25px;
+    height: fit-content;
+    position: sticky; 
+    top: 100px;
+}
+.topic-nav-sidebar h2 {
+}
+.topic-nav-sidebar h3 {
+    font-size: 16px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+.topic-nav-link {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    color: var(--color-text-light);
+    border-radius: var(--border-radius-default);
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+}
+.topic-nav-link:hover {
+    background-color: var(--hover-bg-soft);
+    color: var(--color-accent);
+}
+.topic-nav-link.active {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* --- Card Postingan Forum --- */
+.post-card-link {
+    display: block; /* Agar link mencakup seluruh card */
+    margin-bottom: 20px;
+}
+
+.post-card {
+    /* Mengambil gaya dasar kartu dari Section 5 */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.6), 
+        var(--shadow-stone-soft); 
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid var(--color-secondary);
+}
+.post-card:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--color-accent);
+}
+
+.post-card h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--color-text-light);
+    text-shadow: none;
+    text-transform: none; /* Jangan uppercase untuk judul postingan */
+}
+
+.post-tags {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.post-tags span {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* Kelas spesifik untuk tag */
+.post-tags .tag-competitive {
+    background-color: var(--color-competitive);
+    color: var(--color-text-light);
+}
+.post-tags .tag-casual {
+    background-color: var(--color-casual);
+    color: var(--color-primary);
+}
+
+.post-meta {
+    font-size: 13px;
+    color: var(--color-text-gray);
+    margin-top: 15px;
+    border-top: 1px dashed rgba(255, 215, 0, 0.1);
+    padding-top: 10px;
+}
+
+
+/* --- Trending Sidebar --- */
+.trending-sidebar {
+    padding: 25px;
+    height: fit-content;
+    position: sticky; 
+    top: 100px;
+}
+.trending-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 15px;
+    text-shadow: none;
+}
+.trending-sidebar h3 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-shadow: none;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+.trending-list {
+    /* Mengadopsi gaya dari .news-feed */
+}
+.trending-list a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.05);
+    color: var(--color-text-light);
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+.trending-list a:hover {
+    background-color: var(--hover-bg-soft);
+    padding-left: 10px; /* Efek indent saat hover */
+}
+.trending-list a p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.trending-meta {
+    font-size: 12px;
+    color: var(--color-text-gray);
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* --- 8.9. USER PROFILE PAGE STYLING (user_profile.html) --- */
+
+.user-profile-layout {
+    display: grid;
+    /* Layout 2 Kolom: Sidebar Profil (1.2fr) | Detail CV (3fr) */
+    grid-template-columns: minmax(280px, 1.2fr) 3fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Sidebar Profil Pengguna */
+.profile-sidebar-user {
+    padding: 30px;
+    height: fit-content;
+    text-align: center;
+    position: sticky; 
+    top: 100px;
+    /* Tambahan untuk konsistensi dengan profil pemain */
+    text-align: center;
+    padding: 30px;
+
+}
+
+.profile-avatar-lg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-accent);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.profile-sidebar-user h1 {
+    font-size: 30px;
+    margin: 0;
+    text-shadow: 0 0 5px var(--color-accent);
+    text-align: center;
+    color: var(--color-text-light); /* Pastikan warna konsisten */
+    text-transform: none; /* Biarkan nama pengguna tidak uppercase */
+}
+
+.profile-sidebar-user .user-tag {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 15px;
+}
+
+.profile-sidebar-user .team-vision {
+    /* Menggunakan styling vision yang sudah ada */
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.user-action-btn {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.profile-sidebar-section {
+    text-align: left; /* Override text-align center dari parent */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+.profile-sidebar-section h3 {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Bagian Utama CV Pengguna */
+.user-cv-main,
+.profile-main-detail { /* Terapkan gaya ke kelas baru juga */
+    /* Hanya sebagai kontainer layout, tidak perlu padding atau style card */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Jarak antar kartu/section */
+}
+
+.cv-section {
+    /* Menggunakan gaya card dasar dari Section 5 */
+}
+.cv-section h3 {
+    /* Gaya ini sudah ada, hanya memastikan konsistensi */
+    font-size: 20px;
+    color: var(--color-text-light);
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.cv-section h3 i {
+    margin-right: 8px;
+}
+
+/* Grid Statistik In-Game */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.stat-grid .stat-item {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    border: 1px solid var(--color-secondary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-grid .stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.stat-grid .stat-item h4 {
+    font-size: 28px;
+    color: var(--color-accent);
+    margin: 0 0 5px 0;
+}
+.stat-grid .stat-item p {
+    font-size: 12px;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+}
+
+/* Riwayat Tim */
+.history-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--border-radius-default);
+}
+.history-item h4 {
+    font-size: 16px;
+    color: var(--color-text-light);
+    margin: 0 0 5px 0;
+    text-transform: none;
+}
+.history-item p {
+    font-size: 14px;
+    color: var(--color-text-gray);
+}
+
+/* Memastikan elemen navigasi CV tidak memiliki margin atas/bawah default */
+.cv-section .btn-main {
+    margin-top: 0;
+    padding: 10px 20px;
+}
+
+/* --- 8.9.0. TH SHOWCASE CARD (user_profile.html) --- */
+.th-showcase-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius-default);
+  overflow: hidden;
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  background-color: #0a0c13;
+}
+.th-showcase-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.th-showcase-bg {
+  position: absolute;
+  top: -10%; left: -10%;
+  width: 120%; height: 120%;
+  background-image: url('images/stone-texture.png');
+  background-size: 300px;
+  opacity: 0.1;
+  z-index: 1;
+  transition: transform 0.4s ease-out;
+}
+
+.th-showcase-fg {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+  z-index: 3;
+  transform: translateZ(40px); /* Efek 3D */
+}
+
+.th-showcase-info {
+  z-index: 2;
+  transform: translateZ(20px); /* Efek 3D - dipindahkan dari inline style */
+}
+.th-showcase-info h4 {
+  font-size: 32px;
+  color: var(--color-accent);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.th-showcase-info p {
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* --- 8.9.1. PROFILE POST FEED STYLING (user_profile.html) --- */
+/* Menggunakan gaya .post-card yang sudah ada, hanya menambahkan wrapper jika perlu */
+.profile-post-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Memberi jarak antar kartu postingan */
+    margin-top: 15px;
+}
+
+/* Menghapus margin bawah yang berlebihan di dalam feed profil */
+.profile-post-feed .post-card-link {
+    margin-bottom: 0;
+}
+
+
+/* --- 8.10. TEAM REVIEWS PAGE STYLING (team_reviews.html) --- */
+
+/* Mengatur Header Ulasan Tim */
+.review-summary-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-secondary);
+    margin-bottom: 30px;
+}
+
+/* Perbaikan untuk tata letak header ulasan */
+.review-summary-section > div {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antara tombol dan judul */
+}
+
+.review-summary-section h1 {
+    font-size: 32px;
+    margin: 0;
+    text-shadow: none; 
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 15px;
+}
+.review-summary-section .btn-secondary {
+    margin-top: 0;
+}
+.review-summary-section .team-action-btn {
+    margin-top: 0;
+}
+
+/* Layout Utama Ulasan */
+.review-layout {
+    display: grid;
+    /* Layout 2 Kolom: Sidebar Statistik (1.5fr) | Daftar Ulasan (3fr) */
+    grid-template-columns: 1.5fr 3fr; 
+    gap: 40px;
+}
+
+/* Sidebar Statistik Ulasan */
+.review-stats-sidebar {
+    padding: 25px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+.review-stats-sidebar h2 {
+    font-size: 24px;
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-text-light);
+}
+.review-stats-sidebar .rating-score {
+    font-size: 60px;
+    font-family: 'Dosis', sans-serif;
+    color: var(--color-accent);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    display: block;
+}
+.review-stats-sidebar .rating-meta {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-top: 5px;
+}
+.review-stats-sidebar h3 {
+    font-size: 16px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+/* --- 8.10.1. REVIEW CARD STYLING --- */
+.review-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-accent);
+    transition: all 0.2s;
+}
+.review-card:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 215, 0, 0.1);
+}
+.review-rating {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.review-rating.rating-negative {
+    color: var(--color-competitive);
+}
+.review-card-negative {
+    border-left-color: var(--color-competitive);
+}
+.reviewer-meta {
+    font-size: 13px;
+    color: var(--color-text-gray);
+}
+
+/* Gaya Histogram Rating Bintang */
+.histogram-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.histogram-bar:hover, .histogram-bar.active {
+    background-color: var(--hover-bg-soft);
+    border-radius: var(--border-radius-default);
+    padding-left: 10px;
+}
+
+.histogram-bar .bar-label {
+    width: 80px; /* Lebar tetap untuk label bintang */
+    color: var(--color-text-gray);
+}
+.histogram-bar .bar-fill {
+    height: 12px;
+    background-color: var(--color-accent); /* Default Emas */
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4); 
+    width: 0; /* Lebar awal untuk animasi */
+    transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1); /* Transisi animasi yang lebih halus */
+    flex-grow: 1;
+}
+.histogram-bar .bar-fill.bar-casual {
+    background-color: var(--color-casual);
+}
+.histogram-bar .bar-fill.bar-warning {
+    background-color: #FFB800;
+}
+.histogram-bar .bar-fill.bar-competitive {
+    background-color: var(--color-competitive);
+}
+.histogram-bar .bar-fill.bar-accent {
+    background-color: var(--color-accent);
+}
+.histogram-bar span:last-child {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+/* Daftar Ulasan */
+.review-list-area h2 {
+    border-left: 4px solid var(--color-secondary);
+}
+
+/* --- 8.11. REGISTERED TEAMS PAGE STYLING (registered_teams.html) --- */
+
+.team-list-container {
+    display: grid;
+    /* Membuat grid responsif dengan kolom minimal 350px */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.team-list-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.team-list-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.team-list-card .team-info {
+    flex-grow: 1; /* Membuat info tim mengisi ruang yang tersedia */
+}
+
+.team-list-card .btn-secondary {
+    margin-top: 0; /* Menghapus margin atas default dari tombol */
+    padding: 10px 20px;
+    white-space: nowrap; /* Mencegah teks tombol terpotong */
+}
+
+/* --- 9. MEDIA QUERIES & RESPONSIVE DESIGN --- */
+
+@media (max-width: 1200px) {
+    /* Rampingkan layout 3 kolom menjadi 2 kolom */
+    .profile-content-layout,
+    .knowledge-layout {
+        grid-template-columns: 3fr 1.2fr; /* Sembunyikan sidebar paling kiri/kanan */
+    }
+    .profile-sidebar-left, .topic-nav-sidebar {
+        display: none; /* Sembunyikan sidebar navigasi topik di layar medium */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Kembalikan lebar kartu carousel menjadi 80% di layar kecil */
+    .card-carousel {
+        grid-auto-columns: 80%;
+    }
+    .container { padding: 0 20px; }
+
+    /* Ubah layout 2 kolom menjadi 1 kolom di halaman utama */
+    .top-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ubah layout 2 atau 3 kolom menjadi 1 kolom di halaman lain */
+    .team-search-layout,
+    .profile-content-layout,
+    .public-profile-layout,
+    .tournament-layout,
+    .knowledge-layout,
+    .forum-detail-layout,
+    .user-profile-layout,
+    .review-layout, 
+    .war-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .review-form-layout {
+        grid-template-columns: 1fr; /* Tumpuk form menjadi satu kolom di mobile */
+    }
+
+    /* Hapus posisi sticky di mobile agar tidak mengganggu scroll */
+    .filter-sidebar, .profile-sidebar-right, .topic-nav-sidebar, .trending-sidebar, .profile-sidebar-user, .author-sidebar, .war-sidebar {
+        position: static;
+        max-height: none;
+    }
+}
+/* --- 8.15. WAR COMMAND CENTER STYLING (war_command_center.html) --- */
+
+.war-layout {
+    display: grid;
+    /* Layout 2 Kolom: Sidebar Status (1.2fr) | Panel Strategi (3fr) */
+    grid-template-columns: minmax(280px, 1.2fr) 3fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.war-sidebar {
+    padding: 25px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.war-timer {
+    font-family: 'Dosis', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--color-competitive);
+    text-shadow: 0 0 10px var(--color-competitive);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.score-display {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.score-display .score-item {
+    flex: 1;
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+}
+.score-display h4 {
+    font-size: 24px;
+    color: var(--color-accent);
+}
+
+.target-list {
+    list-style: none;
+    padding: 0;
+}
+.target-list .target-item {
+    padding: 8px 10px;
+    border-bottom: 1px dashed rgba(255,215,0,0.1);
+}
+
+/* Gaya untuk panel strategi di War Command Center */
+.strategy-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.strategy-panel-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Mencegah konten meluap */
+}
+
+.war-chat-box {
+    flex-grow: 1;
+    overflow-y: auto; /* Membuat area chat bisa di-scroll */
+    margin-bottom: 20px;
+    padding-right: 10px; /* Memberi ruang untuk scrollbar */
+}
+
+.chat-message {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.chat-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.chat-content p {
+    margin: 0 0 5px 0;
+}
+
+.chat-meta {
+    font-size: 12px;
+    color: var(--color-text-gray);
+}
+
+.war-chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- 8.8.1. FORUM & NEWS DETAIL STYLING --- */
+
+/* Meta Detail (Tags, Author, Date) */
+.post-meta-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    gap: 10px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    font-size: 14px;
+}
+
+.author-link {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* Konten Postingan Utama */
+.post-body {
+    line-height: 1.7; /* Tingkatkan keterbacaan */
+    font-size: 16px;
+}
+.post-body p {
+    margin-bottom: 20px;
+}
+.post-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+.post-body ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.post-body ul li i {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--color-secondary);
+}
+.post-body img {
+    max-width: 100%; /* Kunci untuk gambar responsif */
+    height: auto;
+    border-radius: var(--border-radius-default);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    margin: 20px 0;
+}
+
+/* Placeholder Video Embed */
+.video-embed-placeholder {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect Ratio 16:9 */
+    background-color: #000;
+    border-radius: var(--border-radius-default);
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-gray);
+    font-weight: bold;
+    border: 1px solid var(--color-secondary);
+}
+
+/* Bagian Komentar */
+.comments-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 215, 0, 0.1);
+}
+.comments-section h3 {
+    margin-bottom: 20px;
+}
+.comment-input-area {
+    margin-bottom: 30px;
+}
+.comment-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    margin-bottom: 15px;
+    border-left: 3px solid var(--color-secondary);
+}
+.comment-card .author {
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+/* Kotak Profil Penulis di Bawah Postingan */
+.post-author-box {
+    margin-top: 40px;
+    padding: 25px;
+    border-top: 2px solid rgba(255, 215, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius-default);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.post-author-box .profile-avatar-lg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0; /* Override margin default */
+}
+.post-author-box-info h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--color-accent);
+}
+
+/* Sidebar Penulis di Halaman Detail Forum */
+.author-sidebar {
+    padding: 30px;
+    height: fit-content;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+}
+.author-sidebar h3 {
+    font-size: 18px;
+    color: var(--color-accent);
+    text-shadow: none;
+    text-transform: uppercase;
+}
+.author-sidebar .trending-list {
+    text-align: left; /* Pastikan daftar link rata kiri */
+}
+
+/* --- 8.16. SEARCH OVERLAY STYLING --- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 17, 26, 0.95); /* Latar belakang gelap transparan */
+    z-index: 200; /* Pastikan di atas semua elemen lain */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 20px;
+    
+    /* Sembunyikan secara default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    font-size: 20px;
+    padding: 15px 50px 15px 20px; /* Beri ruang untuk tombol close */
+    border-width: 2px;
+}
+
+.close-search-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--color-text-gray);
+    cursor: pointer;
+}
+
+/* --- 8.16 NOTIFICATION PAGE STYLING --- */
+.notification-card {
+    /* Mengambil gaya dasar kartu */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    
+    /* Tata letak flexbox */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px; /* Jarak antar kartu */
+    border-left: 4px solid var(--color-secondary); /* Border default */
+    transition: all 0.2s ease-in-out;
+}
+
+.notification-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Penanda visual untuk notifikasi penting */
+.notification-card[data-category="urgent"] {
+    border-left-color: var(--color-competitive);
+}
+
+.notification-icon {
+    font-size: 28px;
+    flex-shrink: 0; /* Mencegah ikon menyusut */
+    width: 40px; /* Memberi ruang yang konsisten */
+    text-align: center;
+}
+
+.notification-content {
+    flex-grow: 1; /* Mengisi ruang yang tersedia */
+}
+
+.notification-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px !important; /* Override margin p */
+    color: var(--color-text-light);
+}
+
+.notification-time {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-gray);
+    margin-top: 8px;
+}
+
+/* Tombol di dalam kartu notifikasi */
+.notification-card .btn-main,
+.notification-card .btn-secondary {
+    margin-top: 0; /* Menghapus margin atas default */
+    white-space: nowrap; /* Mencegah teks tombol terpotong */
+    padding: 10px 20px;
+}
+
+/* --- 8.16.1 NOTIFICATION PAGE LAYOUT --- */
+.notification-layout {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 3fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.notification-filter-sidebar {
+    padding: 25px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.notification-filter-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.notification-filter-sidebar .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-filter-sidebar .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: var(--border-radius-default);
+    color: var(--color-text-light);
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.notification-filter-sidebar .filter-btn:hover {
+    background-color: var(--hover-bg-soft);
+}
+
+.notification-filter-sidebar .filter-btn.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+}
+
+/* --- 8.14. FORM LAYOUT STYLING (create_post.html, edit_profile.html, etc.) --- */
+
+/* Memberi padding pada kontainer form */
+.create-post-container,
+.create-tournament-container,
+.edit-profile-container {
+    padding: 40px;
+}
+
+.form-section-title {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding-bottom: 10px;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.text-editor-area {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.action-buttons .btn-main,
+.action-buttons .btn-secondary {
+    margin-top: 0; /* Override margin default pada tombol */
+}
+.theme-toggle-auth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+}
+
+/* --- 8.12. STRATEGIST LIST PAGE STYLING (strategist_list.html) --- */
+
+.strategist-list-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Default satu kolom */
+    gap: 20px;
+}
+
+.strategist-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-decoration: none; /* Menghapus garis bawah dari link <a> */
+}
+
+.strategist-card .profile-avatar-lg {
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+    width: 80px;
+    height: 80px;
+}
+
+.strategist-card .strategist-info {
+    flex-grow: 1;
+}
+
+.strategist-card .btn-secondary {
+    white-space: nowrap; /* Mencegah teks tombol terpotong */
+}
+
+/* --- 8.13. STATUS/CONFIRMATION PAGE STYLING (e.g., clan_join_request.html) --- */
+.status-page-container {
+    /* Menggantikan .edit-profile-container untuk konteks ini */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    padding: 40px;
+    max-width: 700px; /* Lebar maksimum untuk keterbacaan */
+    margin: 40px auto; /* Beri margin atas/bawah dan pusatkan secara horizontal */
+    text-align: center;
+}
+
+.status-icon-large {
+    font-size: 60px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.status-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* --- 8.13.1 REVIEW FORM LAYOUT --- */
+.review-form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom yang sama lebar */
+    gap: 40px; /* Jarak antar kolom */
+    margin-top: 30px;
+}
+
+/* Tata letak untuk area input di dalam form ulasan */
+.form-input-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Pastikan kontainer mengisi tinggi yang tersedia */
+}
+.form-input-area .form-group {
+    display: flex; /* Jadikan flex container */
+    flex-direction: column; /* Susun secara vertikal */
+    flex-grow: 1; /* Dorong elemen berikutnya ke bawah */
+}
+
+/* Beri padding jika form-input-area adalah sebuah card */
+.form-input-area.card {
+    padding: 30px;
+}
+
+/* Pastikan textarea mengisi ruang yang tersedia di dalam form-group */
+.form-input-area .form-group textarea {
+    flex-grow: 1; /* Kunci: Buat textarea mengisi ruang vertikal */
+}
+
+
+/* --- 8.17. MANAGE ROSTER PAGE STYLING (manage_roster.html) --- */
+
+.roster-management-layout {
+    display: grid;
+    /* Layout 2 Kolom: Konten Utama (3fr) | Sidebar (1.2fr) */
+    grid-template-columns: 3fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.member-management-card {
+    /* Menggunakan gaya card dasar */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.member-management-card h2 {
+    border-left-color: var(--color-secondary);
+}
+
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: var(--border-radius-default);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.member-card.pending-approval {
+    border-left: 4px solid var(--color-casual);
+    background-color: rgba(0, 204, 122, 0.05);
+}
+
+.member-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-secondary);
+}
+
+.member-info {
+    flex-grow: 1; /* Kunci: Mendorong tombol ke kanan */
+}
+.member-info h4 {
+    margin: 0 0 5px 0;
+    text-transform: none;
+}
+.member-info p {
+    font-size: 14px;
+    color: var(--color-text-gray);
+}
+
+.member-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.member-actions .btn-main,
+.member-actions .btn-secondary {
+    margin-top: 0;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* --- 8.18. MANAGE SCHEDULE PAGE STYLING (manage_schedule.html) --- */
+
+.schedule-layout {
+    display: grid;
+    /* Layout 2 Kolom: Kalender (3fr) | Sidebar (1.2fr) */
+    grid-template-columns: 3fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.calendar-area {
+    /* Menggunakan gaya card dasar */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), var(--shadow-stone-soft);
+    padding: 25px;
+}
+
+.btn-calendar-nav {
+    padding: 8px 12px;
+    margin: 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    padding-top: 10px;
+}
+
+.calendar-day-header {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-text-gray);
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.calendar-date-cell {
+    position: relative;
+    min-height: 100px;
+    padding: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: var(--border-radius-default);
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.calendar-date-cell:hover {
+    background-color: var(--hover-bg-soft);
+    border-color: var(--color-accent);
+}
+
+.calendar-date-cell.other-month {
+    opacity: 0.4;
+}
+
+.event-marker {
+    display: block;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.event-war {
+    background-color: var(--color-competitive);
+    color: var(--color-text-light);
+}
+.event-practice {
+    background-color: var(--color-accent);
+}
+
+.event-war-bg { background-color: rgba(178, 34, 34, 0.1); }
+.event-practice-bg { background-color: rgba(255, 215, 0, 0.1); }
+}

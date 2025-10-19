@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Riwayat Ulasan Tim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>Riwayat Ulasan Tim: War Legends</h1>
+            </div>
+            <a href="#" class="btn-secondary">Lihat Anggota Saat Ini</a>
+        </div>
+
+        <section class="review-layout">
+            
+            <aside class="review-stats-sidebar card">
+                <h2>Rating Rata-rata</h2>
+                <div class="mb-25 text-center">
+                    <p class="rating-score">4.8</p>
+                    <p class="rating-meta"><i class="fas fa-star text-accent"></i> / 5.0 (120 Ulasan)</p>
+                </div>
+
+                <h3>Filter Berdasarkan Bintang</h3>
+                
+                <div class="filter-group" id="review-filter-group">
+                    <div class="histogram-bar" data-rating="5">
+                        <span class="bar-label">5 Bintang</span>
+                        <div class="bar-fill bar-accent" data-width="70%"></div>
+                        <span>84</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="4">
+                        <span class="bar-label">4 Bintang</span>
+                        <div class="bar-fill bar-casual" data-width="20%"></div>
+                        <span>24</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="3">
+                        <span class="bar-label">3 Bintang</span>
+                        <div class="bar-fill bar-warning" data-width="5%"></div>
+                        <span>6</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="1">
+                        <span class="bar-label">1 Bintang</span>
+                        <div class="bar-fill bar-competitive" data-width="3%"></div>
+                        <span>3</span>
+                    </div>
+                    
+                    <button class="btn-secondary full-width">Tampilkan Semua Ulasan</button>
+                </div>
+            </aside>
+
+            <section class="review-list-area">
+                <h2 id="review-count">Ulasan (120 Total)</h2>
+                
+                <div class="card" id="review-list-container" style="padding: 20px;">
+                    <div class="review-card review-card-negative" data-rating="1">
+                        <div class="review-card-header">
+                            <span class="review-rating rating-negative"><i class="fas fa-star"></i> 1/5</span>
+                            <span class="reviewer-meta">Ulasan dari: <span>Bambang T.</span> (Mantan Anggota)</span>
+                        </div>
+                        <p>“Masalah komitmen sangat parah. Kapten tim sering tidak hadir saat jadwal war, dan komunikasi di Discord tidak profesional. Kami bubar setelah 2 bulan.”</p>
+                        <p class="reviewer-meta mt-10">Bergabung selama: 2 Bulan | Tanggal Ulasan: 10/08/2025</p>
+                    </div>
+
+                    <div class="review-card" data-rating="5">
+                        <div class="review-card-header">
+                            <span class="review-rating"><i class="fas fa-star"></i> 5/5</span>
+                            <span class="reviewer-meta">Ulasan dari: <span>Lord Z.</span> (Mantan Kapten)</span>
+                        </div>
+                        <p>“Tim yang sangat terorganisir, strategi selalu matang, dan setiap anggota punya peran yang jelas. Berhenti karena fokus kuliah, tapi sangat merekomendasikan!”</p>
+                        <p class="reviewer-meta mt-10">Bergabung selama: 1.5 Tahun | Tanggal Ulasan: 05/09/2025</p>
+                    </div>
+
+                    <div class="review-card" data-rating="5">
+                        <div class="review-card-header">
+                            <span class="review-rating"><i class="fas fa-star"></i> 5/5</span>
+                            <span class="reviewer-meta">Ulasan dari: <span>Xena A.</span> (Mantan Anggota)</span>
+                        </div>
+                        <p>“Komunitasnya suportif dan ramah, cocok untuk yang ingin serius tapi tetap santai. Selalu dapat *troops* maksimal. Saya belajar banyak taktik *3-star* di sini!”</p>
+                        <p class="reviewer-meta mt-10">Bergabung selama: 6 Bulan | Tanggal Ulasan: 01/09/2025</p>
+                    </div>
+                </div>
+                <button id="load-more-reviews-btn" class="btn-load-more">Muat Lebih Banyak Ulasan</button>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

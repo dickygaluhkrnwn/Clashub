@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Profil Pengguna: Helix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar active">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-header">
+            <div class="header-left-content">
+                <a href="teamhub.html" class="btn-secondary">
+                    <i class="fas fa-arrow-left mr-8"></i> Kembali ke Pencarian
+                </a>
+            </div>
+            <div class="header-actions">
+                <a href="#" class="btn-secondary user-action-btn">Kirim Pesan</a>
+                <a href="#" class="btn-main user-action-btn">Kirim Undangan Tim</a>
+            </div>
+        </div>
+
+        <section class="user-profile-layout">
+            <aside class="profile-sidebar-user card">
+                <img src="images/placeholder-avatar.png" alt="Avatar Helix" class="profile-avatar-lg">
+                <h1 id="profile-username">Helix</h1>
+                <p class="user-tag" id="profile-player-tag">#A1B2C3D4</p>
+                <span class="team-vision vision-casual">Kasual</span>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-info-circle text-secondary"></i> Bio & Visi</h3>
+                    <p class="text-gray" id="profile-bio">Pemain kasual yang mencari tim aktif untuk war dan donasi. Aktif setiap malam.</p>
+                </div>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-cogs text-secondary"></i> Preferensi</h3>
+                    <p><strong class="text-accent">Role:</strong> <span id="profile-role">Donatur & Attacker</span></p>
+                    <p><strong class="text-accent">Jam Aktif:</strong> <span id="profile-hours">19:00 - 22:00 WIB</span></p>
+                </div>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-link text-secondary"></i> Kontak</h3>
+                    <p><i class="fab fa-discord mr-8"></i> <span id="profile-discord">Belum diatur</span></p>
+                </div>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-star text-accent"></i> Reputasi Komitmen</h3>
+                    <div class="text-center">
+                        <p class="reputation-score-large" style="font-size: 40px; margin-bottom: 0;">4.5 <i class="fas fa-star"></i></p>
+                        <p class="user-tag">(8 Ulasan Komitmen)</p>
+                    </div>
+                    <a href="player_reviews.html" class="btn-secondary full-width mt-20">Lihat Semua Ulasan</a>
+                </div>
+
+            </aside>
+
+            <section class="profile-main-detail">
+                <div class="cv-section card"> <!-- Menggabungkan 3 kartu menjadi 1 -->
+                    <div class="th-showcase-card" id="th-showcase-card">
+                        <div class="th-showcase-bg"></div>
+                        <img src="images/th15.png" alt="Town Hall 15" id="profile-th-image" class="th-showcase-fg">
+                        <div class="th-showcase-info">
+                            <h4 id="profile-th-level" class="text-gradient-gold">TH 15</h4>
+                            <p>Level Bangunan Utama</p>
+                        </div>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <h4>5200+</h4>
+                            <p>Trofi Saat Ini</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>250</h4>
+                            <p>Bintang War Diperoleh</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3><i class="fas fa-comments text-secondary"></i> Aktivitas & Postingan Terbaru</h3>
+                    <div class="profile-post-feed">
+                        <a href="forum_detail.html" class="post-card-link">
+                            <div class="post-card card">
+                                <div class="post-tags">
+                                    <span>#TanyaJawab</span>
+                                    <span class="tag-casual">#Donasi</span>
+                                </div>
+                                <h4>Pasukan apa yang paling efektif untuk donasi di CWL?</h4>
+                                <p class="post-meta">Diposting 3 hari yang lalu | Balasan: 12 | Likes: 25</p>
+                            </div>
+                        </a>
+                        <a href="forum_detail_base.html" class="post-card-link">
+                            <div class="post-card card">
+                                <div class="post-tags">
+                                    <span>#BaseBuilding</span>
+                                </div>
+                                <h4>Butuh saran untuk base war TH15, ada yang bisa bantu?</h4>
+                                <p class="post-meta">Diposting 1 hari yang lalu | Balasan: 5 | Likes: 10</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-history text-secondary"></i> Riwayat Tim</h3>
+                    <div class="history-item card">
+                        <h4><i class="fas fa-shield-alt text-gray mr-8"></i>No Drama Casuals</h4>
+                        <p>Durasi: <strong class="text-accent">8 Bulan</strong> | Visi: Kasual</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

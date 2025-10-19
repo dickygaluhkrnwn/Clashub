@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Profil Pengguna: Lord Z</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar active">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="user-profile-layout">
+            
+            <aside class="profile-sidebar-user card">
+                <img src="images/placeholder-avatar.png" alt="Avatar LordZ" class="profile-avatar-lg">
+                <h1 id="profile-username">Lord Z</h1>
+                <p class="user-tag">#P20C8Y9L</p>
+                <span class="team-vision vision-competitive">Kompetitif</span>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-info-circle text-secondary"></i> Bio & Visi</h3>
+                    <p id="profile-bio">Fokus TH 16, spesialis serangan Hybrid dan Super Witches. Mencari tim serius dengan jadwal latihan malam hari. Tidak menerima tim kasual.</p>
+                </div>
+                
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-cogs text-secondary"></i> Preferensi</h3>
+                    <p><strong class="text-accent">Role Favorit:</strong> <span id="profile-role">Attacker Utama</span></p>
+                    <p><strong class="text-accent">Jam Aktif:</strong> <span id="profile-hours">20:00 - 23:00 WIB</span></p>
+                </div>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-link text-secondary"></i> Kontak</h3>
+                    <p><i class="fab fa-discord mr-8"></i> <span id="profile-discord">LordZ#1234</span></p>
+                    <p><i class="fas fa-globe mr-8"></i> <span id="profile-website">lordz.pro</span></p>
+                </div>
+
+                <div class="profile-sidebar-section">
+                    <h3><i class="fas fa-star text-accent"></i> Reputasi ClashHub</h3>
+                    <div class="text-center">
+                        <p class="reputation-score-large" style="font-size: 40px; margin-bottom: 0;">4.7 <i class="fas fa-star"></i></p>
+                        <p class="user-tag">(15 Ulasan Komitmen)</p>
+                    </div>
+                    <a href="player_reviews.html" class="btn-secondary full-width mt-20">Lihat Semua Ulasan Saya</a>
+                </div>
+
+                <a href="edit_profile.html" class="btn-secondary full-width mt-25">Edit Profil Saya</a>
+            </aside>
+
+            <section class="profile-main-detail">
+                
+                <div class="cv-section card">
+                    <div class="th-showcase-card" id="th-showcase-card">
+                        <div class="th-showcase-bg"></div>
+                        <img src="images/th16.png" alt="Town Hall 16" id="profile-th-image" class="th-showcase-fg">
+                        <div class="th-showcase-info">
+                            <h4 id="profile-th-level" class="text-gradient-gold">TH 16</h4>
+                            <p>Level Bangunan Utama</p>
+                        </div>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <h4>6200+</h4>
+                            <p>Trofi Saat Ini</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>450</h4>
+                            <p>Bintang War Diperoleh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-stream"></i> Aktivitas & Postingan Terbaru</h3>
+                    <div class="profile-post-feed">
+                        <a href="forum_detail.html" class="post-card-link">
+                            <div class="post-card card">
+                                <div class="post-tags">
+                                    <span class="tag-competitive">#TH16</span>
+                                    <span>#StrategiSerangan</span>
+                                </div>
+                                <h4>Perubahan Meta: Strategi Hydrid Apa yang Cocok Setelah Update?</h4>
+                                <p class="post-meta">Diposting 2 hari yang lalu | Balasan: 45 | Likes: 120</p>
+                            </div>
+                        </a>
+                        <a href="forum_detail_base.html" class="post-card-link">
+                            <div class="post-card card">
+                                <div class="post-tags">
+                                    <span>#BaseBuilding</span>
+                                    <span class="tag-casual">#Tutorial</span>
+                                </div>
+                                <h4>Koleksi Base Legend League Anti 3 Bintang Bulan Ini</h4>
+                                <p class="post-meta">Diposting 5 hari yang lalu | Balasan: 72 | Likes: 250</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Riwayat Tim</h3>
+                    <div class="history-item card">
+                        <h4><i class="fas fa-crown text-secondary mr-8"></i>War Legends (Kapten)</h4>
+                        <p>Durasi: <strong class="text-accent">1.5 Tahun</strong> | Visi: Kompetitif</p>
+                        <p class="text-accent mt-5"><i class="fas fa-trophy mr-5"></i> Pencapaian: Juara 3 Liga Musim 2</p>
+                    </div>
+                    <div class="history-item card">
+                        <h4><i class="fas fa-door-open text-gray mr-8"></i>No Stress Casuals</h4>
+                        <p>Durasi: <strong class="text-accent">6 Bulan</strong> | Visi: Kasual</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

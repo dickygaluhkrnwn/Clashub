@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <h1>Pusat Strategi & Komunitas E-sports CLASH OF CLANS</h1>
+        <p class="hero-tagline">Pimpin Klan Anda menuju Kemenangan! Temukan tim, strategi, dan analisis turnamen terbaik.</p>
+        <a href="teamhub.html" class="btn-main btn-hero">TEMUKAN TIM SEKARANG!</a>
+    </section>
+    
+    <main class="container">
+        
+        <section class="top-section">
+            
+            <div class="status-panel">
+                
+                <div class="status-card flex-item-grow card">
+                    <h3 class="status-title-large">STATUS WAR MENDATANG</h3>
+                    
+                    <div class="war-metrics">
+                        <div class="metric-item">
+                            <i class="fas fa-trophy text-accent"></i>
+                            <span class="metric-value">5 WINS</span>
+                            <p>Win Streak Klan</p>
+                        </div>
+                        <div class="metric-item">
+                            <i class="fas fa-skull text-competitive"></i>
+                            <span class="metric-value">13.5</span>
+                            <p>Rata-rata TH Musuh</p>
+                        </div>
+                        <div class="metric-item">
+                            <i class="fas fa-percent text-casual"></i>
+                            <span class="metric-value">98.2%</span>
+                            <p>Destruction Rate</p>
+                        </div>
+                    </div>
+
+                    <p class="status-detail">War Berikutnya Dimulai:</p>
+                    <div class="countdown-display">
+                        <p class="status-time">02:15:30</p>
+                    </div>
+                    <a href="view_schedule.html" class="btn-main full-width">LIHAT KALENDER PENUH</a>
+                </div>
+                
+                <div class="user-team-info-card flex-item-grow card">
+                    
+                    <div class="user-team-header">
+                        <img src="images/clan-badge-placeholder.png" alt="League Icon" class="clan-league-icon">
+                        <div>
+                            <h3>THE GOLDEN ARMY</h3>
+                            <p class="team-tag">CLAN TAG: #P9Y8Q2V0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="clan-stats-grid">
+                        <div class="clan-stat-item"><span>25</span><p>Level Klan</p></div>
+                        <div class="clan-stat-item"><span>MASTER I</span><p>CWL League</p></div>
+                        <div class="clan-stat-item"><span>45/50</span><p>Anggota</p></div>
+                        <div class="clan-stat-item"><span>950</span><p>War Wins</p></div>
+                    </div>
+                    
+                    <a href="team_profile.html" class="btn-secondary full-width">LIHAT HALAMAN KLAN</a>
+                </div>
+                
+            </div>
+            
+            <div class="side-info">
+                
+                <aside class="profile-summary card">
+                    <div class="summary-header">
+                        <img src="images/placeholder-avatar.png" alt="Profile" class="summary-avatar">
+                        <h3>RINGKASAN PROFIL ANDA</h3>
+                    </div>
+
+                    <div class="stat-grid-small">
+                        <div class="stat-item">
+                            <p>TH LEVEL</p>
+                            <span class="data-th data-stat-large">15</span>
+                        </div>
+                        <div class="stat-item rating-item">
+                            <p>REPUTASI</p>
+                            <span class="data-rating data-stat-large">4.8 <i class="fas fa-star"></i></span>
+                        </div>
+                    </div>
+                    
+                    <p class="status-link full-width-link">
+                        <a href="user_profile.html">LENGKAPI E-SPORTS CV ANDA <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </aside>
+
+                <aside class="news-feed card">
+                    <h3>PENGUMUMAN PENTING</h3>
+                    <a href="news_detail.html">
+                        <p>Pembukaan Pendaftaran Liga Musim 3!</p>
+                        <span class="news-date">2 hari lalu</span>
+                    </a>
+                    <a href="news_detail.html">
+                        <p>Update Game Terbaru: TH 16 Resmi Dirilis.</p>
+                        <span class="news-date">5 jam lalu</span>
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Rekomendasi Tim untuk Anda <i class="fas fa-cogs"></i></h2>
+            <div class="card-carousel"> 
+                
+                <div class="team-card">
+                    <div class="team-visuals">
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo"> 
+                        <div>
+                            <h4>THE GOLDEN CLAN</h4>
+                            <p class="team-tag">#GOLDENCLAN</p>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> 
+                            <span class="rating-score">4.9</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-stats-row">
+                        <span class="team-vision vision-competitive">KOMPETITIF</span>
+                        <p>TH AVG: <span class="data-th-visual">14.5</span></p>
+                    </div>
+                    
+                    <a href="clan_public_profile.html" class="btn-secondary full-width">LIHAT PROFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-visuals">
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo"> 
+                        <div>
+                            <h4>NO STRESS CLASH</h4>
+                            <p class="team-tag">#NOSTRESS</p>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> 
+                            <span class="rating-score">4.5</span>
+                        </div>
+                    </div>
+                    <div class="team-stats-row">
+                        <span class="team-vision vision-casual">KASUAL</span>
+                        <p>TH AVG: <span class="data-th-visual">12.0</span></p>
+                    </div>
+                    <a href="clan_public_profile.html" class="btn-secondary full-width">LIHAT PROFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-visuals">
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo"> 
+                        <div>
+                            <h4>TH15 EXPERTS</h4>
+                            <p class="team-tag">#TH15PROS</p>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> 
+                            <span class="rating-score">4.7</span>
+                        </div>
+                    </div>
+                    <div class="team-stats-row">
+                        <span class="team-vision vision-competitive">KOMPETITIF</span>
+                        <p>TH AVG: <span class="data-th-visual">15.0</span></p>
+                    </div>
+                    <a href="clan_public_profile.html" class="btn-secondary full-width">LIHAT PROFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-visuals">
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo"> 
+                        <div>
+                            <h4>PHOENIX REBORN</h4>
+                            <p class="team-tag">#PHOENIX</p>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> 
+                            <span class="rating-score">4.7</span>
+                        </div>
+                    </div>
+                    <div class="team-stats-row">
+                        <span class="team-vision vision-competitive">KOMPETITIF</span>
+                        <p>TH AVG: <span class="data-th-visual">14.8</span></p>
+                    </div>
+                    <a href="clan_public_profile.html" class="btn-secondary full-width">LIHAT PROFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-visuals">
+                        <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo"> 
+                        <div>
+                            <h4>CHILL CLASHERS</h4>
+                            <p class="team-tag">#CHILL</p>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> 
+                            <span class="rating-score">4.3</span>
+                        </div>
+                    </div>
+                    <div class="team-stats-row">
+                        <span class="team-vision vision-casual">KASUAL</span>
+                        <p>TH AVG: <span class="data-th-visual">11.5</span></p>
+                    </div>
+                    <a href="clan_public_profile.html" class="btn-secondary full-width">LIHAT PROFIL</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Strategi & Tips Terbaru <i class="fas fa-book-open"></i></h2>
+            <div class="card-carousel">
+                <a href="forum_detail.html" class="post-card-link">
+                    <div class="strategy-card">
+                        <div class="strategy-meta-top">
+                            <span class="strategy-tag">#TH15</span>
+                            <span class="meta-detail"><i class="fas fa-eye"></i> 1.2K VIEWS</span>
+                        </div>
+                        
+                        <h4>PANDUAN SERANGAN DRAGON RIDER POPULER</h4>
+                        
+                        <div class="strategy-meta-bottom">
+                            <p>OLEH: VERIFIED STRATEGIST <i class="fas fa-check-circle verified-badge"></i></p>
+                            <span class="news-date"><i class="fas fa-calendar"></i> 2 HARI LALU</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link">
+                    <div class="strategy-card">
+                        <div class="strategy-meta-top">
+                            <span class="strategy-tag">#TEAMMANAGEMENT</span>
+                            <span class="meta-detail"><i class="fas fa-eye"></i> 500 VIEWS</span>
+                        </div>
+                        
+                        <h4>5 TIPS KOMUNIKASI EFEKTIF KAPTEN TIM</h4>
+                        
+                        <div class="strategy-meta-bottom">
+                            <p>OLEH: CLASHHUB ADVISOR</p>
+                            <span class="news-date"><i class="fas fa-calendar"></i> 1 MINGGU LALU</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link">
+                    <div class="strategy-card">
+                        <div class="strategy-meta-top">
+                            <span class="strategy-tag">#BASEBUILDING</span>
+                            <span class="meta-detail"><i class="fas fa-eye"></i> 2.5K VIEWS</span>
+                        </div>
+                        
+                        <h4>PANDUAN BASE ANTI 3 BINTANG DI CWL</h4>
+                        
+                        <div class="strategy-meta-bottom">
+                            <p>OLEH: BASEMASTER <i class="fas fa-check-circle verified-badge"></i></p>
+                            <span class="news-date"><i class="fas fa-calendar"></i> 3 HARI LALU</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link">
+                    <div class="strategy-card">
+                        <div class="strategy-meta-top">
+                            <span class="strategy-tag">#TH16</span>
+                            <span class="meta-detail"><i class="fas fa-eye"></i> 890 VIEWS</span>
+                        </div>
+                        
+                        <h4>TIPS MENGGUNAKAN ROOT RIDER UNTUK PEMULA</h4>
+                        
+                        <div class="strategy-meta-bottom">
+                            <p>OLEH: PROATTACKER</p>
+                            <span class="news-date"><i class="fas fa-calendar"></i> 5 HARI LALU</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-box">
+            <input type="text" placeholder="Cari pemain, tim, atau strategi...">
+            <i id="close-search-btn" class="fas fa-times close-search-btn"></i>
+        </div>
+        <div class="search-results-container">
+            <h3>Hasil Pencarian Cepat:</h3>
+            <!-- Hasil akan muncul di sini, contoh: -->
+            <a href="user_profile.html" class="post-card-link">
+                <div class="post-card" style="border-left-color: var(--color-casual);">
+                    <h4><i class="fas fa-user"></i> LordZ (Pemain)</h4>
+                    <p class="post-meta">TH 16 | Reputasi: 4.7 | Tim: War Legends</p>
+                </div>
+            </a>
+            <a href="clan_public_profile.html" class="post-card-link">
+                <div class="post-card" style="border-left-color: var(--color-secondary);">
+                    <h4><i class="fas fa-shield-alt"></i> War Legends (Tim)</h4>
+                    <p class="post-meta">Visi: Kompetitif | Anggota: 49/50</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

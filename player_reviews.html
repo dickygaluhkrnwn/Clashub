@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Reputasi Komitmen: Lord Z</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>Reputasi Komitmen: Lord Z</h1>
+            </div>
+            <p>Diulas oleh <span class="font-bold text-accent">15 Tim</span> yang Pernah Diikuti</p>
+        </div>
+
+        <section class="review-layout">
+            
+            <aside class="review-stats-sidebar card">
+                <h2>Rating Komitmen Rata-rata</h2>
+                <div class="text-center mb-25">
+                    <p class="rating-score">4.7</p>
+                    <p class="rating-meta"><i class="fas fa-star text-accent"></i> / 5.0 (Total 15 Ulasan)</p>
+                </div>
+
+                <h3>Filter Berdasarkan Rating</h3>
+                
+                <div class="filter-group" id="player-review-filter-group">
+                    <div class="histogram-bar" data-rating="5" data-count="12">
+                        <span class="bar-label">5 Bintang</span>
+                        <div class="bar-fill bar-accent" data-width="80%"></div>
+                        <span>12</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="4" data-count="2">
+                        <span class="bar-label">4 Bintang</span>
+                        <div class="bar-fill bar-casual" data-width="13%"></div>
+                        <span>2</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="3" data-count="0">
+                        <span class="bar-label">3 Bintang</span>
+                        <div class="bar-fill bar-warning" data-width="0%"></div>
+                        <span>0</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="2" data-count="0">
+                        <span class="bar-label">2 Bintang</span>
+                        <div class="bar-fill bar-warning" data-width="0%"></div>
+                        <span>0</span>
+                    </div>
+                    <div class="histogram-bar" data-rating="1" data-count="1">
+                        <span class="bar-label text-competitive">1 Bintang</span>
+                        <div class="bar-fill bar-competitive" data-width="7%"></div>
+                        <span>1</span>
+                    </div>
+                    
+                    <button class="btn-secondary full-width">Tampilkan Semua Ulasan</button>
+                </div>
+            </aside>
+
+            <section class="review-list-area">
+                <h2 id="review-count">Ulasan (15 Total)</h2>
+                <div class="card" id="review-list-container" style="padding: 20px;">
+                    <div class="review-card" data-rating="5">
+                        <div class="review-card-header">
+                            <span class="review-rating"><i class="fas fa-star"></i> 5/5</span>
+                            <span class="reviewer-meta">Dari: <span>Kapten X</span> (Mantan Kapten Tim <strong>War Legends</strong>)</span>
+                        </div>
+                        <p class="font-italic">“Anggota yang sangat loyal, skill luar biasa, dan selalu hadir tepat waktu saat war. Sangat direkomendasikan!”</p>
+                        <p class="reviewer-meta mt-10">Tanggal Ulasan: 01/10/2025</p> 
+                    </div>
+
+                    <div class="review-card" data-rating="4">
+                        <div class="review-card-header">
+                            <span class="review-rating"><i class="fas fa-star"></i> 4/5</span>
+                            <span class="reviewer-meta">Dari: <span>Kapten Z</span> (Mantan Kapten Tim <strong>Phoenix Reborn</strong>)</span>
+                        </div>
+                        <p class="font-italic">“Skillnya bagus, tapi kadang telat konfirmasi untuk war. Secara keseluruhan masih anggota yang baik.”</p>
+                        <p class="reviewer-meta mt-10">Tanggal Ulasan: 15/07/2024</p> 
+                    </div>
+
+                    <div class="review-card review-card-negative" data-rating="1">
+                        <div class="review-card-header">
+                            <span class="review-rating rating-negative"><i class="fas fa-star"></i> 1/5</span>
+                            <span class="reviewer-meta">Dari: <span>Kapten Y</span> (Mantan Kapten Tim <strong>No Commit</strong>)</span>
+                        </div>
+                        <p class="font-italic">“Sering menghilang tanpa kabar saat war clan. Komitmen tidak sesuai dengan visi tim kami yang kompetitif.”</p>
+                        <p class="reviewer-meta mt-10">Tanggal Ulasan: 20/05/2024</p>
+                    </div>
+                    
+                    <button id="load-more-reviews-btn" class="btn-load-more" style="display: none;">Muat Lebih Banyak Ulasan</button>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <script src="interactive.js"></script>
+</body>
+</html>

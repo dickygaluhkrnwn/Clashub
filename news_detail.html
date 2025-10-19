@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Detail Pengumuman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="news-detail-layout">
+            
+            <div class="profile-main-detail card">
+                <div class="post-content-area">
+                    <h1>Pembukaan Pendaftaran Liga Musim 3!</h1>
+                    
+                    <div class="post-meta-detail">
+                        <div class="post-tags">
+                            <span class="tag-competitive">#LIGA</span>
+                            <span>#EVENT</span>
+                        </div>
+                        <span class="text-gray ml-20">Penulis: <a href="#" class="author-link">ClashHub Admin</a> | Tanggal: 13 Okt 2025</span>
+                    </div>
+    
+                    <div class="post-body">
+                        <p>Para Clasher, bersiaplah! Pendaftaran untuk ClashHub Liga Musim 3 yang sangat dinantikan kini telah resmi dibuka. Musim ini menjanjikan persaingan yang lebih ketat, hadiah yang lebih besar, dan format baru yang menantang.</p>
+                        <br>
+                        <p><strong>Detail Utama:</strong></p>
+                        <ul>
+                            <li><i class="fas fa-dot-circle"></i> <strong>Prize Pool:</strong> Rp 15.000.000</li>
+                            <li><i class="fas fa-dot-circle"></i> <strong>Syarat TH:</strong> Minimal TH 15</li>
+                            <li><i class="fas fa-dot-circle"></i> <strong>Penutupan Pendaftaran:</strong> 20 Oktober 2025</li>
+                        </ul>
+                        <p class="mt-20">Segera daftarkan tim terbaik Anda dan buktikan bahwa tim Anda layak menjadi juara musim ini. Klik tombol di bawah untuk melihat detail lengkap dan mendaftar.</p>
+                        
+                        <a href="tournament_detail.html" class="btn-main mt-20">Lihat Detail & Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" placeholder="Cari pemain, tim, atau topik...">
+            <i class="fas fa-times close-search-btn" id="close-search-btn"></i>
+        </div>
+        <div class="search-results-container">
+            <h3>Hasil Pencarian Cepat</h3>
+            <!-- Hasil akan muncul di sini -->
+        </div>
+    </div>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

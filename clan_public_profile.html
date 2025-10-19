@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Profil Publik Klan: War Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a> 
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="profile-header">
+            <div class="header-left-content"> 
+                
+                <a href="teamhub.html" class="btn-secondary">
+                    <i class="fas fa-arrow-left mr-8"></i> Kembali ke Pencarian Tim
+                </a>
+                
+                <div class="profile-info">
+                    <h1>War Legends</h1>
+                    <p class="team-tag">#WARLEGEND</p>
+                    <span class="team-vision vision-competitive">Kompetitif (TH 15-16)</span>
+                </div>
+            </div>
+            
+            <a href="clan_join_request.html" class="team-action-btn">Kirim Permintaan Bergabung</a>
+        </div>
+
+        <section class="public-profile-layout"> 
+            
+            <aside class="profile-sidebar-left card">
+                <h3>Ringkasan Statistik</h3>
+                <ul class="team-specs">
+                    <li><i class="fas fa-shield-alt"></i> Rata-rata TH: <strong>16.0</strong></li>
+                    <li><i class="fas fa-users"></i> Anggota: <strong>49/50</strong></li>
+                    <li><i class="fas fa-medal"></i> Trofi Tim: <strong>45.000</strong></li>
+                    <li><i class="fas fa-calendar-alt"></i> War: <strong>5x/Minggu</strong></li>
+                </ul>
+                
+                <h3 class="mt-30"><i class="fas fa-clock"></i> Event Terdekat</h3>
+                <div class="management-tool-card text-center">
+                    <p class="font-bold mb-10">War Clan Berikutnya:</p> 
+                    <p class="status-time status-time-medium">7 Oktober</p>
+                    <p class="text-size-14 text-gray">20:00 WIB (Persiapan)</p>
+                </div>
+
+                <h3 class="mt-30">Kontak & Sosial</h3>
+                <ul class="team-specs">
+                    <li><i class="fas fa-globe"></i> Website: <strong>warlegends.com</strong></li>
+                    <li><i class="fab fa-discord"></i> Discord: <strong>/warlegends</strong></li>
+                </ul>
+            </aside>
+
+            <section class="profile-main-detail card">
+                <div class="tab-navigation">
+                    <button type="button" class="tab-link active" data-tab="visi">Visi & Aturan</button>
+                    <button type="button" class="tab-link" data-tab="riwayat">Riwayat Kompetisi</button>
+                    </div>
+            
+                <div class="tab-content active" id="visi">
+                    <div class="detail-section">
+                        <h3>Visi Tim</h3>
+                        <p>Menjadi salah satu tim war terbaik di Asia, berfokus pada meta TH 16 dan strategi serangan 3-bintang yang inovatif. Kami mencari pemain berkomitmen tinggi.</p>
+            
+                        <h3>Aturan Tim (Wajib Baca)</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle text-casual"></i> Wajib hadir saat War, jika absen harus izin 24 jam sebelumnya.</li>
+                            <li><i class="fas fa-check-circle text-casual"></i> Donasi *troops* sesuai permintaan dan minimal rasio 1:2.</li>
+                            <li><i class="fas fa-check-circle text-casual"></i> Diskusi strategi wajib di Discord 30 menit sebelum war dimulai.</li>
+                            <li><i class="fas fa-calendar-alt text-secondary"></i> Komitmen War: 5 kali per minggu, wajib TH 16.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="riwayat">
+                    <div class="detail-section">
+                        <h3>Riwayat Turnamen Resmi</h3>
+                        <table class="competition-history-table">
+                            <thead>
+                                <tr>
+                                    <th>Turnamen</th>
+                                    <th>Peringkat</th>
+                                    <th>Tanggal</th>
+                                    <th>Hadiah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ClashHub Liga Musim 2</td>
+                                    <td class="rank-highlight">Juara 3</td>
+                                    <td>Sep 2025</td>
+                                    <td>Rp 5.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td>TH 15 Open Cup</td>
+                                    <td>Peringkat 9</td>
+                                    <td>Mei 2025</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Pencapaian War Klan</h3>
+                        <p>Total Kemenangan War: <strong class="text-accent">450</strong> | Rekor Kemenangan Beruntun: <strong class="text-accent">35</strong></p>
+                    </div>
+                </div>
+            
+            </section>
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

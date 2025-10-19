@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Verified Strategist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item active">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1><i class="fas fa-user-check text-casual"></i> Verified Strategist</h1>
+            </div>
+            <p>Panduan dari kontributor terbaik komunitas.</p>
+        </div>
+
+        <div class="strategist-list-container">
+            
+            <a href="user_profile.html" class="strategist-card card">
+                <img src="images/placeholder-avatar.png" alt="Avatar LordZ" class="profile-avatar-lg">
+                <div class="strategist-info">
+                    <h3>LordZ <span class="verified-badge text-casual">VERIFIED STRATEGIST</span></h3>
+                    <p class="text-gray">Spesialis serangan Hybrid & TH 16. Fokus pada meta kompetitif dan analisis War Clan League.</p>
+                    <p><strong>Reputasi:</strong> 4.7 <i class="fas fa-star text-accent"></i> | <strong>Total Postingan:</strong> 25</p>
+                </div>
+                <span class="btn-secondary mt-0">Lihat Profil</span>
+            </a>
+
+            <a href="user_profile.html" class="strategist-card card">
+                <img src="images/placeholder-avatar.png" alt="Avatar BaseMaster" class="profile-avatar-lg">
+                <div class="strategist-info">
+                    <h3>BaseMaster <span class="verified-badge text-casual">VERIFIED STRATEGIST</span></h3>
+                    <p class="text-gray">Ahli dalam merancang base anti 3-bintang untuk semua level Town Hall. Menyediakan layanan review base.</p>
+                    <p><strong>Reputasi:</strong> 4.9 <i class="fas fa-star text-accent"></i> | <strong>Total Postingan:</strong> 42</p>
+                </div>
+                <span class="btn-secondary mt-0">Lihat Profil</span>
+            </a>
+
+            <a href="user_profile.html" class="strategist-card card">
+                <img src="images/placeholder-avatar.png" alt="Avatar KaptenX" class="profile-avatar-lg">
+                <div class="strategist-info">
+                    <h3>KaptenX <span class="verified-badge text-casual">VERIFIED STRATEGIST</span></h3>
+                    <p class="text-gray">Fokus pada manajemen tim, rekrutmen, dan membangun budaya tim yang solid untuk klan kasual hingga semi-kompetitif.</p>
+                    <p><strong>Reputasi:</strong> 4.6 <i class="fas fa-star text-accent"></i> | <strong>Total Postingan:</strong> 18</p>
+                </div>
+                <span class="btn-secondary mt-0">Lihat Profil</span>
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>
+
+<!--
+[PROMPT_SUGGESTION]Bisakah kita membuat filter di halaman `tournament.html` bekerja secara otomatis setiap kali pilihan dropdown diubah, tanpa perlu menekan tombol "Terapkan Filter"?[/PROMPT_SUGGESTION]
+[PROMPT_SUGGESTION]Bagaimana cara membuat fungsi "Reset Filter" di halaman `teamhub.html`?[/PROMPT_SUGGESTION]
+-->

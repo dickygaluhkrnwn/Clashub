@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Login atau Daftar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    
+    <div class="auth-container">
+        <button id="theme-toggle-btn" class="theme-toggle theme-toggle-auth" aria-label="Toggle light/dark mode">
+            <i class="fas fa-sun"></i>
+        </button>
+        <div class="logo">ClashHub</div>
+        
+        <div class="tab-auth">
+            <span class="tab-auth-link active" data-form="login">LOGIN</span>
+            <span class="tab-auth-link" data-form="register">DAFTAR AKUN BARU</span>
+        </div>
+
+        <form id="login" class="auth-form">
+            <input type="text" placeholder="Email atau Username" required>
+            <input type="password" placeholder="Password" required>
+            
+            <a href="#">Lupa Password?</a>
+
+            <button type="submit" class="btn-main full-width" onclick="window.location.href='index.html'; return false;">
+                <i class="fas fa-sign-in-alt"></i> LOGIN
+            </button>
+        </form>
+
+        <form id="register" class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Konfirmasi Password" required>
+
+            <h3 class="text-secondary text-size-16 mt-15 mb-10">Integrasi Clash of Clans (Wajib)</h3>
+            
+            <input type="text" placeholder="Player Tag ID (Contoh: #P9Y8Q2V)" required>
+            <select required>
+                <option value="">-- Pilih Level Town Hall Anda --</option>
+                <option value="16">Town Hall 16</option>
+                <option value="15">Town Hall 15</option>
+                <option value="14">Town Hall 14</option>
+            </select>
+
+            <button type="submit" class="btn-main full-width" onclick="window.location.href='index.html'; return false;">
+                <i class="fas fa-user-plus"></i> DAFTAR SEKARANG
+            </button>
+        </form>
+    </div>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

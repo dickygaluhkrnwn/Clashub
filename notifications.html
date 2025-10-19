@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Pusat Notifikasi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell text-accent"></i> 
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <h1><i class="fas fa-bell text-accent"></i> Pusat Notifikasi</h1>
+
+        <section class="notification-layout"> 
+            
+            <aside class="notification-filter-sidebar card">
+                <h2><i class="fas fa-filter"></i> Filter Notifikasi</h2>
+                <div class="filter-group">
+                    <a href="#" class="filter-btn active" data-filter="all"><i class="fas fa-inbox"></i> Semua</a>
+                    <a href="#" class="filter-btn" data-filter="urgent"><i class="fas fa-exclamation-triangle"></i> Mendesak</a>
+                    <a href="#" class="filter-btn" data-filter="team"><i class="fas fa-users"></i> Tim</a>
+                    <a href="#" class="filter-btn" data-filter="system"><i class="fas fa-cogs"></i> Sistem</a>
+                </div>
+            </aside>
+
+            <section class="notification-list-area">
+                <div class="notification-card" data-category="urgent">
+                    <div class="notification-icon">
+                        <i class="fas fa-exclamation-triangle text-competitive"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p class="notification-title">Aksi Mendesak</p>
+                        <p>Anggota **Bambang T.** baru saja keluar. <strong>Wajib Beri Ulasan Komitmen!</strong></p>
+                        <span class="notification-time">5 menit yang lalu</span>
+                    </div>
+                    <a href="review_form.html" class="btn-main mt-0">Nilai Sekarang</a>
+                </div>
+
+                <div class="notification-card" data-category="urgent">
+                    <div class="notification-icon">
+                        <i class="fas fa-user-plus text-competitive"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p class="notification-title">Permintaan Tim Baru</p>
+                        <p>Pemain **Helix** (TH 15) telah mengirim permintaan bergabung ke War Legends.</p>
+                        <span class="notification-time">1 jam yang lalu</span>
+                    </div>
+                    <a href="player_public_profile.html" class="btn-main mt-0">Tinjau Profil</a>
+                </div>
+                
+                <div class="notification-card" data-category="team">
+                    <div class="notification-icon">
+                        <i class="fas fa-calendar-alt text-secondary"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p class="notification-title">Jadwal Tim</p>
+                        <p>War Clan berikutnya dijadwalkan pada hari Jumat, 20:00 WIB.</p>
+                        <span class="notification-time">5 jam yang lalu</span>
+                    </div>
+                    <a href="view_schedule.html" class="btn-secondary mt-0">Lihat Kalender</a>
+                </div>
+                
+                <div class="notification-card" data-category="system">
+                    <div class="notification-icon">
+                        <i class="fas fa-trophy text-secondary"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p class="notification-title">Event Baru</p>
+                        <p>Pendaftaran ClashHub Liga Musim 4 telah dibuka! Syarat: TH 15+.</p>
+                        <span class="notification-time">1 hari yang lalu</span>
+                    </div>
+                    <a href="tournament.html" class="btn-secondary mt-0">Ke Halaman Event</a>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

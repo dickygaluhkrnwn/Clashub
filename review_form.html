@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Beri Ulasan Komitmen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>Nilai Komitmen: PlayerID123</h1>
+            </div>
+            <p>Ulasan dari tim <span class="font-bold text-accent">War Legends</span></p>
+        </div>
+
+        <p class="text-gray mb-20 text-size-16">Ulasan Anda akan memengaruhi reputasi komitmen pemain ini di ClashHub. Berikan penilaian yang jujur dan konstruktif.</p>
+        
+        <form onsubmit="alert('Ulasan Terkirim!'); return false;">
+            <div class="review-form-layout">
+                <div class="form-input-area card">
+                    
+                        <div class="form-group">
+                            <label>Komitmen & Kehadiran</label>
+                            <div class="star-rating" data-rating="3">
+                                <i class="fas fa-star rated"></i><i class="fas fa-star rated"></i><i class="fas fa-star rated"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <input type="hidden" name="rating_kehadiran" id="rating_kehadiran" value="3">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Kualitas Serangan (Skill)</label>
+                            <div class="star-rating" data-rating="4">
+                                <i class="fas fa-star rated"></i><i class="fas fa-star rated"></i><i class="fas fa-star rated"></i><i class="fas fa-star rated"></i><i class="fas fa-star"></i>
+                            </div>
+                            <input type="hidden" name="rating_skill" id="rating_skill" value="4">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sikap & Kerjasama</label>
+                            <div class="star-rating" data-rating="1">
+                                <i class="fas fa-star rated"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <input type="hidden" name="rating_sikap" id="rating_sikap" value="1">
+                        </div>
+                </div>
+
+                <div class="form-input-area">
+                        <div class="form-group">
+                            <label for="review-text">Ulasan Singkat (Maks. 200 Karakter)</label>
+                            <textarea id="review-text" placeholder="Contoh: Sangat aktif war, tapi perlu perbaikan strategi TH 16." maxlength="200"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-main full-width">Kirim Ulasan & Finalisasi</button>
+                            <a href="team_profile.html" class="btn-secondary full-width mt-10">Lewati Ulasan (Tidak Wajib)</a>
+                        </div>
+                    </div>
+            </div>
+        </form>
+        
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

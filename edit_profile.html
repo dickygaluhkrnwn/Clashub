@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Edit Profil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar active">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="edit-profile-container card">
+            <h1><i class="fas fa-user-edit"></i> Edit Profil & E-Sports CV</h1>
+
+            <form id="edit-profile-form">
+                
+                <h3 class="form-section-title">Informasi Dasar</h3>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan username Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-bio-textarea">Bio & Visi</label>
+                    <textarea id="user-bio-textarea" name="user-bio" class="text-editor-area" placeholder="Jelaskan diri Anda, gaya bermain, dan tim seperti apa yang Anda cari..."></textarea>
+                </div>
+
+                <h3 class="form-section-title">Preferensi & Jadwal</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fav-role">Role Favorit</label>
+                        <select id="fav-role">
+                            <option>Attacker Utama</option>
+                            <option>Base Builder</option>
+                            <option>Donatur</option>
+                            <option>Strategist</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="active-hours">Jam Aktif</label>
+                        <input type="text" id="active-hours" placeholder="Contoh: 19:00 - 22:00 WIB">
+                    </div>
+                </div>
+
+                <h3 class="form-section-title">Integrasi Game & Sosial</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="player-tag">Player Tag</label>
+                        <input type="text" id="player-tag" value="#P20C8Y9L" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="th-level">Town Hall Level</label>
+                        <select id="th-level">
+                            <option>TH 16</option>
+                            <option>TH 15</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="discord-id">Discord ID</label>
+                        <input type="text" id="discord-id" placeholder="Contoh: LordZ#1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website/Portfolio</label>
+                        <input type="text" id="website" placeholder="Link ke portofolio atau media sosial">
+                    </div>
+                </div>
+
+                <div class="action-buttons justify-content-end">
+                    <button type="button" class="btn-secondary" onclick="window.location.href='user_profile.html'">
+                        Batal
+                    </button>
+                    <button type="submit" class="btn-main">
+                        <i class="fas fa-save"></i> Simpan Perubahan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

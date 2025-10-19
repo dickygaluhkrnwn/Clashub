@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - War Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>War Aktif: War Legends vs Top Tier</h1>
+            </div>
+            <a href="#" class="btn-secondary">Lihat Hasil War Final</a>
+        </div>
+
+        <section class="war-layout">
+            
+            <aside class="war-sidebar card">
+                <h2><i class="fas fa-stopwatch"></i> Waktu Tersisa</h2>
+                <p class="war-timer">08 : 30 : 55</p>
+
+                <h2><i class="fas fa-star-half-alt"></i> Skor Saat Ini</h2>
+                <div class="score-display">
+                    <div class="score-item">
+                        <h4>45</h4>
+                        <p>Bintang Kami</p>
+                    </div>
+                    <div class="score-item">
+                        <h4>95.2%</h4>
+                        <p>Persentase Hancur</p>
+                    </div>
+                </div>
+
+                <h2><i class="fas fa-crosshairs"></i> Klaim Target Cepat</h2>
+                <ul class="target-list">
+                    <li class="target-item">Basis #5 (TH 16) <span class="target-status status-eligible">BELUM DIKLAIM</span></li>
+                    <li class="target-item">Basis #6 (TH 15) <span class="target-status">DIKLAIM: Xena</span></li>
+                    <li class="target-item">Basis #7 (TH 15) <span class="target-status status-eligible">BELUM DIKLAIM</span></li>
+                    <li class="target-item">Basis #8 (TH 14) <span class="target-status status-eligible">BELUM DIKLAIM</span></li>
+                </ul>
+            </aside>
+
+            <section class="strategy-panel card">
+                <h2><i class="fas fa-comments"></i> Papan Strategi War</h2>
+                <div class="strategy-panel-content">
+                    <div class="war-chat-box">
+                        <div class="chat-message">
+                            <img src="images/placeholder-avatar.png" alt="Avatar" class="chat-avatar">
+                            <div class="chat-content">
+                                <p><strong>Lord Z (Kapten):</strong> Target #5 & #6 harus diserang dengan strategi Hydrid. Anggota TH 16, fokus ke sana!</p>
+                                <div class="chat-meta"><span>15 menit yang lalu</span></div>
+                            </div>
+                        </div>
+                        <div class="chat-message">
+                            <img src="images/placeholder-avatar.png" alt="Avatar" class="chat-avatar">
+                            <div class="chat-content">
+                                <p><strong>Xena:</strong> Oke Kapten, saya klaim #6. Saya akan unggah <em>funneling plan</em> sebentar lagi.</p>
+                                <div class="chat-meta"><span>12 menit yang lalu</span></div>
+                            </div>
+                        </div>
+                        <div class="chat-message">
+                            <img src="images/placeholder-avatar.png" alt="Avatar" class="chat-avatar">
+                            <div class="chat-content">
+                                <p><strong>Ghost:</strong> Ada yang punya <em>base link</em> #7? Perlu cek jebakan.</p>
+                                <div class="chat-meta"><span>5 menit yang lalu</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="war-chat-input">
+                        <input type="text" placeholder="Kirim pesan strategi...">
+                        <button class="btn-main"><i class="fas fa-paper-plane"></i> Kirim</button>
+                        <button class="btn-secondary"><i class="fas fa-upload"></i></button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

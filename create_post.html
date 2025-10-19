@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Buat Postingan Baru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item active">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="create-post-container card">
+            <h1><i class="fas fa-edit"></i> Buat Diskusi / Panduan Baru</h1>
+
+            <form onsubmit="alert('Postingan berhasil dipublikasikan!'); return false;">
+                <div class="form-group">
+                    <label for="post-title">Judul Postingan</label>
+                    <input type="text" id="post-title" placeholder="Contoh: Strategi War TH 16 Terbaik Musim Ini..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="post-content">Isi Konten (Strategi, Teks, Gambar, Video)</label>
+                    <textarea class="text-editor-area" id="post-content" placeholder="Tulis konten panduan atau pertanyaan Anda di sini..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="post-category">Pilih Kategori</label>
+                        <select id="post-category" required>
+                            <option>Strategi Serangan</option>
+                            <option>Base Building</option>
+                            <option>Manajemen Tim</option>
+                            <option>Berita Komunitas</option>
+                            <option>Diskusi Umum</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-tags">Tambahkan Tag (Pisahkan dengan koma)</label>
+                        <input type="text" id="post-tags" placeholder="Contoh: TH16, Hybrid, CWL">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" class="btn-secondary">
+                        <i class="fas fa-save"></i> Simpan Draf
+                    </button>
+                    <button type="submit" class="btn-main">
+                        <i class="fas fa-paper-plane"></i> Publikasikan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="interactive.js"></script>
+</body>
+</html>

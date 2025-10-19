@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Knowledge Hub & Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item active">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="knowledge-layout">
+            
+            <aside class="topic-nav-sidebar card">
+                <h2><i class="fas fa-sitemap"></i> Kategori Forum</h2>
+                
+                <div class="category-filters">
+                    <a href="#" class="topic-nav-link active" data-filter="all">Semua Diskusi</a>
+                    <a href="#" class="topic-nav-link" data-filter="strategiserangan">Strategi Serangan</a>
+                    <a href="#" class="topic-nav-link" data-filter="basebuilding">Base Building</a>
+                    <a href="#" class="topic-nav-link" data-filter="manajementim">Manajemen Tim</a>
+                    <a href="#" class="topic-nav-link" data-filter="beritakomunitas">Berita Komunitas</a>
+                </div>
+
+                <div class="sort-filters">
+                    <h3>Urutkan</h3>
+                    <a href="#" class="topic-nav-link sort-link active" data-sort="terbaru">Terbaru</a>
+                    <a href="#" class="topic-nav-link sort-link" data-sort="trending">Paling Trending</a>
+                </div>
+            </aside>
+
+            <section class="forum-feed-area" id="forum-feed-container">
+                
+                <div class="d-flex justify-content-between align-items-center mb-25">
+                    <h2>Forum Diskusi Aktif</h2>
+                    <a href="create_post.html" class="btn-main mt-0"><i class="fas fa-plus mr-5"></i> Buat Postingan Baru</a>
+                </div>
+                
+                <a href="forum_detail.html" class="post-card-link" data-category="strategiserangan" data-replies="45" data-likes="120">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span class="tag-competitive">#TH16</span>
+                            <span>#StrategiSerangan</span>
+                        </div>
+                        <h4>Perubahan Meta: Strategi Hydrid Apa yang Cocok Setelah Update?</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">LordZ</strong> | Balasan: 45 | Likes: 120</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail_management.html" class="post-card-link" data-category="manajementim" data-replies="15" data-likes="30">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#ManajemenTim</span>
+                            <span>#Komitmen</span>
+                        </div>
+                        <h4>Alat Apa yang Kalian Gunakan Untuk Tracking Kehadiran War?</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">KaptenX</strong> | Balasan: 15 | Likes: 30</p>
+                    </div>
+                </a>
+                
+                <a href="forum_detail_base.html" class="post-card-link" data-category="basebuilding" data-replies="72" data-likes="250">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BaseBuilding</span>
+                            <span class="tag-casual">#Tutorial</span>
+                        </div>
+                        <h4>Panduan Base Anti 3 Bintang di CWL Champion League</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">BaseMaster</strong> | Balasan: 72 | Likes: 250</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link" data-category="beritakomunitas" data-replies="12" data-likes="88">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BeritaKomunitas</span>
+                            <span class="tag-casual">#Event</span>
+                        </div>
+                        <h4>Jadwal Clash of Clans World Championship Diumumkan!</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">ClashNews</strong> | Balasan: 12 | Likes: 88</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link" data-category="strategiserangan" data-replies="33" data-likes="150">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span class="tag-competitive">#TH15</span>
+                            <span>#StrategiSerangan</span>
+                        </div>
+                        <h4>Tips Menggunakan Root Rider untuk Pemula</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">ProAttacker</strong> | Balasan: 33 | Likes: 150</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link" data-category="basebuilding" data-replies="105" data-likes="430">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BaseBuilding</span>
+                        </div>
+                        <h4>Koleksi Base Legend League Terbaik Bulan Ini</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">BaseGod</strong> | Balasan: 105 | Likes: 430</p>
+                    </div>
+                </a>
+
+                <!-- Postingan Tambahan untuk Melengkapi Kategori -->
+                <a href="forum_detail.html" class="post-card-link" data-category="strategiserangan" data-replies="22" data-likes="95">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span class="tag-competitive">#TH14</span>
+                            <span>#StrategiSerangan</span>
+                        </div>
+                        <h4>Analisis Serangan Queen Charge Lalo</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">StrategistPro</strong> | Balasan: 22 | Likes: 95</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail_base.html" class="post-card-link" data-category="basebuilding" data-replies="40" data-likes="180">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BaseBuilding</span>
+                        </div>
+                        <h4>Tips Membuat Trap yang Efektif</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">BaseMaster</strong> | Balasan: 40 | Likes: 180</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail_management.html" class="post-card-link" data-category="manajementim" data-replies="25" data-likes="60">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#ManajemenTim</span>
+                        </div>
+                        <h4>Cara Mengelola Donasi Pasukan Agar Efisien</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">KaptenX</strong> | Balasan: 25 | Likes: 60</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail_management.html" class="post-card-link" data-category="manajementim" data-replies="18" data-likes="45">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#ManajemenTim</span>
+                            <span>#Rekrutmen</span>
+                        </div>
+                        <h4>Template Pesan Rekrutmen yang Menarik Anggota Baru</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">HRClash</strong> | Balasan: 18 | Likes: 45</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link" data-category="beritakomunitas" data-replies="8" data-likes="50">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BeritaKomunitas</span>
+                        </div>
+                        <h4>Recap Turnamen Mingguan: Siapa Juaranya?</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">ClashNews</strong> | Balasan: 8 | Likes: 50</p>
+                    </div>
+                </a>
+
+                <a href="forum_detail.html" class="post-card-link" data-category="beritakomunitas" data-replies="35" data-likes="110">
+                    <div class="post-card">
+                        <div class="post-tags">
+                            <span>#BeritaKomunitas</span>
+                        </div>
+                        <h4>Update Balance Terbaru: Apa Saja yang Berubah?</h4>
+                        <p class="post-meta">Diposting oleh: <strong class="text-accent">ClashNews</strong> | Balasan: 35 | Likes: 110</p>
+                    </div>
+                </a>
+                
+                <button id="load-more-posts-btn" class="btn-load-more" style="display: none;">Muat Lebih Banyak Diskusi</button>
+            </section>
+            
+            <aside class="trending-sidebar card">
+                <h2>Trending Sekarang</h2>
+                <div class="trending-list">
+                    <a href="forum_detail.html">
+                        <p>Bug War Base Terbaru</p>
+                        <span class="trending-meta">1200 Views</span>
+                    </a>
+                    <a href="forum_detail.html"><p>Hero Equipment Terbaik TH 15</p><span class="trending-meta">890 Views</span></a>
+                    <a href="forum_detail.html"><p>Rekrutmen Anggota Tim</p><span class="trending-meta">400 Views</span></a>
+                </div>
+                
+                <h3 class="text-casual">Verified Strategist</h3>
+                <p class="text-size-14 text-gray">Temukan tips terpercaya dari kontributor terbaik komunitas.</p>
+                <a href="#" class="btn-secondary full-width">Lihat Daftar Strategist</a>
+            </aside>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

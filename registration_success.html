@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Pendaftaran Berhasil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a> 
+            <a href="tournament.html" class="nav-item active">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span> <!-- Badge bertambah -->
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="status-page-container">
+            <i class="fas fa-trophy status-icon-large"></i>
+            <h1>Pendaftaran Turnamen Berhasil!</h1>
+            <p class="hero-tagline">
+                Tim Anda, <strong>War Legends</strong>, telah berhasil terdaftar untuk <strong>ClashHub Liga Musim 3</strong>. 
+                Pastikan semua anggota tim melakukan check-in sebelum batas waktu yang ditentukan.
+            </p>
+            <div class="status-actions">
+                <a href="tournament.html" class="btn-main">
+                    <i class="fas fa-trophy"></i> Lihat Event Lain
+                </a>
+                <a href="team_profile.html" class="btn-secondary">
+                    Kembali ke Dasbor Tim
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

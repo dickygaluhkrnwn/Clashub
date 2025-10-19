@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Dasbor Tim Internal: War Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a> 
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i> <!-- Ikon default (mode gelap) -->
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>Dasbor Tim: War Legends</h1>
+            </div>
+            <div class="team-status-badge btn-casual">
+                <i class="fas fa-users"></i> ANDA ADALAH ANGGOTA
+            </div>
+        </div>
+
+        <section class="profile-content-layout">
+            
+            <aside class="profile-sidebar-left card">
+                <h3>Ringkasan Statistik</h3>
+                <ul class="team-specs">
+                    <li><i class="fas fa-shield-alt"></i> Rata-rata TH: <strong>16.0</strong></li>
+                    <li><i class="fas fa-users"></i> Anggota: <strong>49/50</strong></li>
+                    <li><i class="fas fa-medal"></i> Trofi Tim: <strong>45.000</strong></li>
+                    <li><i class="fas fa-calendar-alt"></i> War: <strong>5x/Minggu</strong></li>
+                </ul>
+                
+                <h3 class="mt-30"><i class="fas fa-clock"></i> Jadwal War & Latihan</h3>
+                <div class="management-tool-card">
+                    <p class="font-bold">War Clan Berikutnya:</p>
+                    <p class="status-time status-time-small">7 Oktober, 20:00 WIB</p>
+                    <a href="view_schedule.html" class="btn-secondary full-width">Lihat Kalender Penuh</a> 
+                </div>
+
+                <h3 class="mt-30">Kontak & Sosial</h3>
+                <ul class="team-specs">
+                    <li><i class="fas fa-globe"></i> Website: <strong>warlegends.com</strong></li>
+                    <li><i class="fab fa-discord"></i> Discord: <strong>/warlegends</strong></li>
+                </ul>
+            </aside>
+
+            <section class="profile-main-detail card">
+                <div class="tab-navigation">
+                    <button type="button" class="tab-link active" data-tab="visi">Visi & Aturan</button>
+                    <button type="button" class="tab-link" data-tab="riwayat">Riwayat Kompetisi</button>
+                    <button type="button" class="tab-link kapten-only" data-tab="manajemen">Alat Manajemen (Kapten Only)</button> 
+                </div>
+            
+                <div class="tab-content active" id="visi">
+                    <div class="detail-section">
+                        <h3>Visi Tim</h3>
+                        <p>Menjadi salah satu tim war terbaik di Asia, berfokus pada meta TH 16 dan strategi serangan 3-bintang yang inovatif. Kami mencari pemain berkomitmen tinggi.</p>
+            
+                        <h3>Aturan Tim (Wajib Baca)</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle text-casual"></i> Wajib hadir saat War, jika absen harus izin 24 jam sebelumnya.</li>
+                            <li><i class="fas fa-check-circle text-casual"></i> Donasi *troops* sesuai permintaan dan minimal rasio 1:2.</li>
+                            <li><i class="fas fa-check-circle text-casual"></i> Diskusi strategi wajib di Discord 30 menit sebelum war dimulai.</li>
+                            <li><i class="fas fa-calendar-alt text-secondary"></i> Komitmen War: 5 kali per minggu, wajib TH 16.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="riwayat">
+                    <div class="detail-section">
+                        <h3>Riwayat Turnamen Resmi</h3>
+                        <table class="competition-history-table">
+                            <thead>
+                                <tr>
+                                    <th>Turnamen</th>
+                                    <th>Peringkat</th>
+                                    <th>Tanggal</th>
+                                    <th>Hadiah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ClashHub Liga Musim 2</td>
+                                    <td class="rank-highlight">Juara 3</td>
+                                    <td>Sep 2025</td>
+                                    <td>Rp 5.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td>TH 15 Open Cup</td>
+                                    <td>Peringkat 9</td>
+                                    <td>Mei 2025</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Pencapaian War Klan</h3>
+                        <p>Total Kemenangan War: <strong class="rank-highlight">450</strong> | Rekor Kemenangan Beruntun: <strong class="rank-highlight">35</strong></p>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="manajemen">
+                    <div class="detail-section">
+                        <h3>Akses Khusus Kapten & Co-Leader</h3>
+                        <p class="text-competitive">Area ini berisi alat manajemen sensitif tim.</p>
+                        
+                        <div class="management-tool-card mt-25">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Pengaturan Jadwal Tim</h4>
+                            <p>Buat, edit, dan publikasikan jadwal War dan Latihan.</p>
+                            <a href="manage_schedule.html" class="btn-main">Kelola Jadwal</a>
+                        </div>
+                        
+                        <div class="management-tool-card">
+                            <i class="fas fa-users-cog"></i>
+                            <h4>Kelola Roster & Anggota</h4>
+                            <p>Tinjau permintaan bergabung dan atur peran anggota tim.</p>
+                            <a href="manage_roster.html" class="btn-main">Kelola Roster</a>
+                        </div>
+                        <div class="management-tool-card">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h4>Komando War Aktif</h4>
+                            <p>Akses War Command Center saat War aktif.</p>
+                            <a href="war_command_center.html" class="btn-main">Mulai War</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <aside class="profile-sidebar-right card">
+                <div class="reputation-summary">
+                    <h4>Reputasi Tim</h4>
+                    <p><i class="fas fa-star text-accent"></i> <span class="reputation-score">4.8</span>/5.0</p>
+                    <p class="text-gray">(Total 120 Ulasan Mantan Anggota)</p>
+                </div>
+
+                <h3 class="mt-30 section-divider-bottom">Daftar Anggota Tim (5/50)</h3>
+                <ul class="member-list">
+                    <li><strong class="text-secondary">Captain</strong>: <a href="user_profile.html">Lord Z</a> (TH 16)</li>
+                    <li><strong class="text-secondary">Co-Leader</strong>: <a href="player_public_profile.html">Xena</a> (TH 16)</li>
+                    <li>Member: <a href="player_public_profile.html">Ghost</a> (TH 15)</li>
+                    <li>Member: <a href="player_public_profile.html">Helix</a> (TH 15)</li>
+                    <li>Member: <a href="player_public_profile.html">Blaze</a> (TH 15)</li>
+                </ul>
+                
+                <a href="team_reviews.html" class="btn-secondary full-width mt-20">Lihat Riwayat Ulasan</a>
+            </aside>
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

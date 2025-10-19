@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Team Hub: Pencarian Tim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a> 
+            <a href="tournament.html" class="nav-item">Tournament</a> 
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a> 
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar"> 
+                <img src="images/placeholder-avatar.png" alt="Profile"> 
+            </a>
+        </div>
+    </header>
+
+    <main class="container team-hub-page">
+        <section class="team-search-layout">
+            
+            <aside class="filter-sidebar card">
+                <h2><i class="fas fa-users-cog"></i> Cari Tim</h2>
+                
+                <div class="filter-group">
+                    <label for="search-input">Nama Tim / Tag</label>
+                    <input type="text" id="search-input" placeholder="Cari berdasarkan nama atau tag...">
+                </div>
+
+                <div class="filter-group">
+                    <h3>Kriteria Visi</h3>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-vision="competitive">Kompetitif</button>
+                        <button class="toggle-btn" data-vision="casual">Kasual</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Minimum Reputasi</h3>
+                    <label for="rating-input"><span id="rating-value">4.0</span> <i class="fas fa-star"></i></label>
+                    <input type="range" id="rating-input" min="3.0" max="5.0" step="0.1" value="4.0">
+                </div>
+
+                <div class="filter-group">
+                    <h3>Level Town Hall Minimum</h3>
+                    <label>Min. TH: <span id="th-range-value">13</span></label>
+                    <input type="range" id="th-level-input" min="10" max="16" value="13"> 
+                </div>
+
+                <div class="filter-group">
+                    <button id="apply-team-filters-btn" class="btn-main full-width">Terapkan Filter</button>
+                    <button id="reset-filter-btn" class="btn-secondary full-width">Reset Filter</button>
+                </div>
+            </aside>
+
+            <section class="search-results">
+                <h2 id="team-results-count">6 Tim Ditemukan</h2>
+                
+                <div id="team-search-results-container" class="card-grid results-grid">
+                    
+                    <div class="team-card-search card" data-name="Clash Elites Pro" data-tag="#ELITEPRO" data-vision="competitive" data-rating="4.9" data-th="15.2">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>Clash Elites Pro</h4>
+                                <p class="team-tag">#ELITEPRO</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                                <span class="team-vision vision-competitive">Kompetitif</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">15.2</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+                    <div class="team-card-search card" data-name="No Drama Casuals" data-tag="#NODRAMA" data-vision="casual" data-rating="4.5" data-th="12.0">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>No Drama Casuals</h4>
+                                <p class="team-tag">#NODRAMA</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                                <span class="team-vision vision-casual">Kasual</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">12.0</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+                    
+                    <div class="team-card-search card" data-name="War Legends" data-tag="#WARLEGEND" data-vision="competitive" data-rating="4.8" data-th="16.0">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>War Legends</h4>
+                                <p class="team-tag">#WARLEGEND</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                            <span class="team-vision vision-competitive">Kompetitif</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">16.0</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+
+                    <div class="team-card-search card" data-name="Phoenix Reborn" data-tag="#PHOENIX" data-vision="competitive" data-rating="4.7" data-th="14.8">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>Phoenix Reborn</h4>
+                                <p class="team-tag">#PHOENIX</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                            <span class="team-vision vision-competitive">Kompetitif</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">14.8</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+
+                    <div class="team-card-search card" data-name="Chill Clashers" data-tag="#CHILL" data-vision="casual" data-rating="4.3" data-th="11.5">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>Chill Clashers</h4>
+                                <p class="team-tag">#CHILL</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                            <span class="team-vision vision-casual">Kasual</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">11.5</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.3</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+
+                    <div class="team-card-search card" data-name="Elite Destroyers" data-tag="#DESTROY" data-vision="competitive" data-rating="4.9" data-th="15.8">
+                        <div class="team-card-header">
+                            <img src="images/clan-badge-placeholder.png" alt="Logo Klan" class="clan-logo">
+                            <div>
+                                <h4>Elite Destroyers</h4>
+                                <p class="team-tag">#DESTROY</p>
+                            </div>
+                        </div>
+                        <div class="team-card-stats-grid">
+                            <div class="stat-item">
+                                <p>Visi</p>
+                            <span class="team-vision vision-competitive">Kompetitif</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Rata-rata TH</p>
+                                <span class="data-th-visual">15.8</span>
+                            </div>
+                            <div class="stat-item">
+                                <p>Reputasi</p>
+                                <span class="team-rating-full"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                        <a href="clan_public_profile.html" class="btn-cta-small">Lihat Profil Penuh</a>
+                    </div>
+                    
+                </div>
+                
+                <button id="load-more-teams-btn" class="btn-load-more" style="display: none;">Muat Lebih Banyak Tim</button>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

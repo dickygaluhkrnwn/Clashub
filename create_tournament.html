@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Buat Turnamen Baru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item">Team Hub</a>
+            <a href="tournament.html" class="nav-item active">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="create-tournament-container card">
+            <h1><i class="fas fa-trophy"></i> Buat Turnamen Baru</h1>
+            <p class="text-gray mb-30 text-size-16">Isi formulir di bawah untuk memublikasikan event kompetisi.</p>
+
+            <form onsubmit="alert('Turnamen berhasil dipublikasikan!'); return false;">
+                
+                <h3 class="form-section-title">1. Detail & Nama Event</h3>
+                <div class="form-group">
+                    <label for="tournament-name">Nama Turnamen</label>
+                    <input type="text" id="tournament-name" placeholder="Contoh: ClashHub Open TH 16 Cup" required>
+                </div>
+                <div class="form-group">
+                    <label for="tournament-desc">Deskripsi Singkat / Aturan Dasar</label>
+                    <textarea id="tournament-desc" class="text-editor-area" placeholder="Jelaskan format kompetisi, seperti Single Elimination, War Clan 5v5, dll." required></textarea>
+                </div>
+                
+                <h3 class="form-section-title">2. Persyaratan & Kapasitas</h3>
+                
+                <div class="form-group">
+                    <label for="th-min">Persyaratan Level Town Hall Minimum</label>
+                    <select id="th-min" required>
+                        <option>TH 13</option>
+                        <option>TH 14</option>
+                        <option>TH 15</option>
+                        <option>TH 16</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="max-teams">Kapasitas Maksimal Tim</label>
+                    <input type="number" id="max-teams" min="4" max="128" value="32" placeholder="Jumlah tim (Contoh: 32)" required>
+                </div>
+
+                <h3 class="form-section-title">3. Hadiah & Biaya</h3>
+                
+                <div class="form-group">
+                    <label for="prize-pool">Hadiah Utama (Prize Pool)</label>
+                    <input type="text" id="prize-pool" placeholder="Contoh: Rp 5.000.000 + Item Eksklusif" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-fee">Biaya Pendaftaran (0 jika Gratis)</label>
+                    <input type="number" id="reg-fee" value="0" placeholder="Contoh: 50000">
+                </div>
+
+                <h3 class="form-section-title">4. Jadwal Event</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-close-date">Penutupan Pendaftaran</label>
+                        <input type="date" id="reg-close-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Tanggal Mulai Turnamen</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" class="btn-secondary">
+                        <i class="fas fa-save"></i> Simpan Draf Admin
+                    </button>
+                    <button type="submit" class="btn-main">
+                        <i class="fas fa-bullhorn"></i> Publikasikan Turnamen
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="interactive.js"></script>
+</body>
+</html>

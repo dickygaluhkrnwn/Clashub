@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Kelola Roster Tim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a> 
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="profile-header">
+            <div class="header-left-content">
+                <div class="profile-info">
+                    <h1>Kelola Roster: War Legends</h1>
+                </div>
+            </div>
+        </div>
+
+        <section class="roster-management-layout">
+            
+            <div>
+                <div class="member-management-card card">
+                    <h2>Permintaan Bergabung (1)</h2>
+                    
+                    <div class="member-card pending-approval">
+                        <img src="images/placeholder-avatar.png" alt="Avatar" class="member-avatar">
+                        <div class="member-info">
+                            <h4>Helix</h4>
+                            <p>TH 15 | Reputasi: 4.5 <i class="fas fa-star"></i> | Role: Attacker</p>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn-main"><i class="fas fa-check"></i> Terima</button>
+                            <button class="btn-secondary"><i class="fas fa-times"></i> Tolak</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="member-management-card card">
+                    <h2>Anggota Aktif (49/50)</h2>
+
+                    <div class="member-card">
+                        <img src="images/placeholder-avatar.png" alt="Avatar" class="member-avatar">
+                        <div class="member-info">
+                            <h4>Lord Z</h4>
+                            <p>TH 16 | Reputasi: 4.7 <i class="fas fa-star"></i></p>
+                        </div>
+                        <div class="member-actions">
+                            <select>
+                                <option selected>Kapten</option>
+                                <option>Co-Leader</option>
+                                <option>Member</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="images/placeholder-avatar.png" alt="Avatar" class="member-avatar">
+                        <div class="member-info">
+                            <h4>Xena</h4>
+                            <p>TH 16 | Reputasi: 4.9 <i class="fas fa-star"></i></p>
+                        </div>
+                        <div class="member-actions">
+                            <select>
+                                <option>Kapten</option>
+                                <option selected>Co-Leader</option>
+                                <option>Member</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="images/placeholder-avatar.png" alt="Avatar" class="member-avatar">
+                        <div class="member-info">
+                            <h4>Ghost</h4>
+                            <p>TH 15 | Reputasi: 4.2 <i class="fas fa-star"></i></p>
+                        </div>
+                        <div class="member-actions">
+                            <select>
+                                <option>Kapten</option>
+                                <option>Co-Leader</option>
+                                <option selected>Member</option>
+                            </select>
+                            <button class="btn-secondary btn-danger"><i class="fas fa-user-times"></i> Keluarkan</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <aside class="filter-sidebar card">
+                <h2><i class="fas fa-cogs"></i> Pengaturan Roster</h2>
+                <div class="form-group">
+                    <label>Status Rekrutmen Tim</label>
+                    <select>
+                        <option>Terbuka untuk Umum</option>
+                        <option>Hanya Undangan</option>
+                        <option>Tutup</option>
+                    </select>
+                </div>
+                <button class="btn-main full-width">Simpan Pengaturan</button>
+            </aside>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>

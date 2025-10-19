@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClashHub - Kalender Tim (View Only)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">ClashHub</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="teamhub.html" class="nav-item active">Team Hub</a> 
+            <a href="tournament.html" class="nav-item">Tournament</a>
+            <a href="knowledge_hub.html" class="nav-item">Knowledge Hub</a>
+        </nav>
+        <div class="user-actions">
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="notifications.html" class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="user_profile.html" class="profile-avatar">
+                <img src="images/placeholder-avatar.png" alt="Profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="review-summary-section">
+            <div>
+                <h1>Kalender Tim: War Legends</h1>
+            </div>
+            <p>Tampilan hanya lihat (View Only)</p>
+        </div>
+
+        <section class="schedule-layout">
+            
+            <div class="calendar-area card">
+                <div class="d-flex justify-content-between align-items-center mb-15">
+                    <button class="btn-secondary btn-calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                    <h2>Oktober 2025</h2>
+                    <button class="btn-secondary btn-calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day-header">Min</div>
+                    <div class="calendar-day-header">Sen</div>
+                    <div class="calendar-day-header">Sel</div>
+                    <div class="calendar-day-header">Rab</div>
+                    <div class="calendar-day-header">Kam</div>
+                    <div class="calendar-day-header">Jum</div>
+                    <div class="calendar-day-header">Sab</div>
+
+                    <div class="calendar-date-cell other-month">28</div>
+                    <div class="calendar-date-cell other-month">29</div>
+                    <div class="calendar-date-cell other-month">30</div>
+                    <div class="calendar-date-cell">1</div>
+                    <div class="calendar-date-cell">2</div>
+                    <div class="calendar-date-cell">3</div>
+                    <div class="calendar-date-cell event-war-bg">4
+                        <span class="event-marker event-war">War</span>
+                    </div>
+                    <div class="calendar-date-cell">5</div>
+                    <div class="calendar-date-cell">6</div>
+                    <div class="calendar-date-cell">7</div>
+                    <div class="calendar-date-cell">8</div>
+                    <div class="calendar-date-cell">9</div>
+                    <div class="calendar-date-cell">10</div>
+                    <div class="calendar-date-cell event-practice-bg">11
+                        <span class="event-marker event-practice">Latihan</span>
+                    </div>
+                    <div class="calendar-date-cell">12</div>
+                </div>
+
+                <h3 class="mt-30 text-secondary">Event Mendatang</h3>
+                <ul class="member-list">
+                    <li><i class="fas fa-bolt text-competitive"></i> War Clan vs Top Tier: 4 Oktober, 20:00 WIB</li>
+                    <li><i class="fas fa-wrench text-accent"></i> Sesi Latihan Formasi Baru: 11 Oktober, 21:00 WIB</li>
+                </ul>
+            </div>
+            
+            <aside class="filter-sidebar card">
+                <h2><i class="fas fa-info-circle"></i> Catatan Tim</h2>
+                <p class="text-gray mb-20">Jadwal ini diatur oleh Kapten dan Co-Leader. Hubungi mereka di Discord untuk perubahan atau permintaan absen.</p>
+                
+                <h3>Keterangan</h3>
+                <div class="event-legend">
+                    <p class="mb-10"><i class="fas fa-square text-competitive"></i> = War Clan</p>
+                    <p><i class="fas fa-square text-secondary"></i> = Sesi Latihan / Rapat</p>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>
